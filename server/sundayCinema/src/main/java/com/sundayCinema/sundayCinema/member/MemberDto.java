@@ -11,6 +11,8 @@ import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 public class MemberDto {
+
+    public static String A = "A";
     @Getter
     @Setter
     @NoArgsConstructor

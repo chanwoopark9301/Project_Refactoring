@@ -72,12 +72,10 @@ public class Movie extends Auditable {
     private List<Director> directors = new ArrayList<>();
     @OneToMany(mappedBy = "movie")
     private List<YoutubeReview> youtubeReviews = new ArrayList<>();
-
     @OneToMany(mappedBy = "movie")
     private List<StillCut> stillCuts = new ArrayList<>();
     @OneToMany(mappedBy = "movie")
     private List<Trailer> trailers = new ArrayList<>();
-
     @OneToMany(mappedBy = "movie")
     private List<Comment> comments = new ArrayList<>();
 }

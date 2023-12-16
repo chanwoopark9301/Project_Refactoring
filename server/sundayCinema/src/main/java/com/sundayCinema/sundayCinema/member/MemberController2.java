@@ -18,14 +18,11 @@ public class MemberController2 {
     private final MemberService memberService;
     private final MemberMapper mapper;
 
-
-
     public MemberController2(MemberService memberService, MemberMapper mapper) {
         this.memberService = memberService;
         this.mapper = mapper;
     }
 
-    @CrossOrigin(origins = "http://pre-project-deploy.s3-website.ap-northeast-2.amazonaws.com")
     @PostMapping("/signup")
     public ResponseEntity postMember(@RequestBody MemberDto.MemberPostDto memberPostDto) {
         System.out.println(memberPostDto);

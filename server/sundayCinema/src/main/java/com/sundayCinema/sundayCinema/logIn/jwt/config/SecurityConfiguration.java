@@ -1,7 +1,5 @@
 package com.sundayCinema.sundayCinema.logIn.jwt.config;
 
-
-
 import com.sundayCinema.sundayCinema.logIn.OAuth2.handler.OAuth2MemberSuccessHandler;
 import com.sundayCinema.sundayCinema.logIn.jwt.filter.JwtAuthenticationFilter;
 import com.sundayCinema.sundayCinema.logIn.jwt.filter.JwtVerificationFilter;
@@ -109,9 +107,9 @@ public class SecurityConfiguration {
             HttpServletResponse response = (HttpServletResponse) servletResponse;
 
             // Set CORS headers for every request
-            response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+            response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS");
-            response.setHeader("Access-Control-Allow-Headers", "*");
+            response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 //            response.setHeader("Access-Control-Allow-Credentials", "true");
 
             // Check if it's a preflight request

@@ -8,6 +8,7 @@ import java.util.List;
 public interface MemberMapper {
     Member memberPostDtoToMember(MemberDto.MemberPostDto memberPostDto);
 
+
     Member memberPatchDtoToMember(MemberDto.MemberPatchDto memberPatchDto);
 
     MemberDto.MemberResponseDto memberToMemberResponseDto(Member member);

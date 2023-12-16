@@ -28,7 +28,6 @@ import java.util.List;
 @RequestMapping
 public class MovieController {
     private final MovieService movieService;
-    private final BoxOfficeMovieRepository boxOfficeMovieRepository;
     private final MovieRepository movieRepository;
     private final MovieDetailsMapper movieDetailsMapper;
     private final BoxOfficeSwitchService boxOfficeSwitchService;
@@ -38,7 +37,6 @@ public class MovieController {
                            MovieRepository movieRepository, MovieDetailsMapper movieDetailsMapper,
                            BoxOfficeSwitchService boxOfficeSwitchService, MediaRepoService mediaRepoService) {
         this.movieService = movieService;
-        this.boxOfficeMovieRepository = boxOfficeMovieRepository;
         this.movieRepository = movieRepository;
         this.movieDetailsMapper = movieDetailsMapper;
         this.boxOfficeSwitchService = boxOfficeSwitchService;

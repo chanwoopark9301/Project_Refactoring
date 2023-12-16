@@ -11,6 +11,7 @@ import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.KoreaBoxOffi
 import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,9 @@ public class KobisRepoService {
         this.boxOfficeSwitchService = boxOfficeSwitchService;
     }
 
+    // 이넘이 메모리 어디에 위치하는지 공부 필요.
+    // final 사용 필요 -> dto 와 vo 에 대한 이해 필요.
+    @Transactional
     public List<BoxOfficeMovie> searchAndSaveBoxOfficeByNationCd(String repNationCd) throws Exception {
         List<BoxOfficeMovie> returnBoxList = new ArrayList<>();
         List<BoxOfficeMovie> boxOfficeList = kobisService.searchingTop10BoxOffice(repNationCd); //검색
@@ -96,23 +100,23 @@ public class KobisRepoService {
             boxOfficeSwitchService.saveBoxOfficeByNationCd("G", notDuplicationMovie);
         }
         return notDuplicationGenreList;
-}
+    }
 
 
     //영화 세부 정보 저장
     public void saveMovieDetails(List<BoxOfficeMovie> boxList) throws Exception {
         List<Movie> movieList = kobisService.searchingMovieInfo(boxList);
-        for (int i = 0; i < movieList.size(); i++) {
+        for (int i = 0; i < movieList.size(); i++) { //foreach 문 사용 필요 ->  근데 스트림이 더 깔끔(자바 인액션, 자바 모던 프로젝트 참고 필요)
             if (verifyExistMovie(movieList.get(i).getMovieCd())) {
+                continue;
             }// 박스오피스 객체가 영화 레포에 중복으로 존재하면 아무것도 안함
-            else {
-                movieRepository.save(movieList.get(i));
-                saveDirectors(movieList.get(i));
-                saveActors(movieList.get(i));
-                saveGenres(movieList.get(i));
-                saveMovieAudit(movieList.get(i));
-                saveNations(movieList.get(i));
-            }
+            movieRepository.save(movieList.get(i));
+            saveDirectors(movieList.get(i));
+            saveActors(movieList.get(i));
+            saveGenres(movieList.get(i));
+            saveMovieAudit(movieList.get(i));
+            saveNations(movieList.get(i));
+
         }
     }
 
