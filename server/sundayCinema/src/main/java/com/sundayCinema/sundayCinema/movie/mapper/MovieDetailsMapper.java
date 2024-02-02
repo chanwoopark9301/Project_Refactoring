@@ -93,7 +93,7 @@ public class MovieDetailsMapper {
         for (int i = 0; i < movie.getActors().size(); i++) {
             ActorDto actorDto = new ActorDto();
             Actor actor = movie.getActors().get(i);
-            actorDto.setCast(actor.getCast());
+            actorDto.setCast(actor.getCasting());
             actorDto.setPeopleNm(actor.getPeopleNm());
             actorList.add(actorDto);
         }

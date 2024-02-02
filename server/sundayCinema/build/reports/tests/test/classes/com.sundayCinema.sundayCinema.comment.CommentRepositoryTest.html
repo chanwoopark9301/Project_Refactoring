@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CommentRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CommentRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.sundayCinema.sundayCinema.comment.html">com.sundayCinema.sundayCinema.comment</a> &gt; CommentRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.307s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">saveCommentTest()</td>
+<td class="success">0.307s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>04:08:39.231 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+04:08:39.249 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+04:08:39.290 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest] from class [org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper]
+04:08:39.302 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest], using SpringBootContextLoader
+04:08:39.307 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]: class path resource [com/sundayCinema/sundayCinema/comment/CommentRepositoryTest-context.xml] does not exist
+04:08:39.307 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]: class path resource [com/sundayCinema/sundayCinema/comment/CommentRepositoryTestContext.groovy] does not exist
+04:08:39.307 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+04:08:39.308 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]: CommentRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:08:39.375 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]
+04:08:39.430 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\myProject\refectoring\main_project\server\sundayCinema\build\classes\java\main\com\sundayCinema\sundayCinema\SundayCinemaApplication.class]
+04:08:39.430 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sundayCinema.sundayCinema.SundayCinemaApplication for test class com.sundayCinema.sundayCinema.comment.CommentRepositoryTest
+04:08:39.433 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - @TestExecutionListeners is not present for class [com.sundayCinema.sundayCinema.comment.CommentRepositoryTest]: using defaults.
+04:08:39.433 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+04:08:39.452 [Test worker] INFO org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a2bb0eb, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c291aad, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2d0566ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@733037, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7728643a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@320e400, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5167268, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1cfd1875, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@28c0b664, org.springframework.test.context.event.EventPublishingTestExecutionListener@2c444798, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1af7f54a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6ebd78d1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@436390f4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d157787, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@68ed96ca, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6d1310f6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3228d990]
+04:08:39.457 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@28a2a3e7 testClass = CommentRepositoryTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3f2049b6 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.sundayCinema.sundayCinema.SundayCinemaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@43b4fe19, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6256ac4f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3917d366, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@452ba1db, [ImportsContextCustomizer@10b3df93 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c041b41, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1cb3ec38, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+04:08:39.470 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@28a2a3e7 testClass = CommentRepositoryTest, testInstance = com.sundayCinema.sundayCinema.comment.CommentRepositoryTest@22ee2d0, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3f2049b6 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.sundayCinema.sundayCinema.SundayCinemaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@43b4fe19, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6256ac4f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3917d366, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@452ba1db, [ImportsContextCustomizer@10b3df93 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c041b41, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1cb3ec38, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2024-02-02 04:08:39.896  INFO 22836 --- [    Test worker] c.s.s.comment.CommentRepositoryTest      : Starting CommentRepositoryTest using Java 17.0.9 on 박찬우 with PID 22836 (started by cksdn in C:\myProject\refectoring\main_project\server\sundayCinema)
+2024-02-02 04:08:39.898  INFO 22836 --- [    Test worker] c.s.s.comment.CommentRepositoryTest      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-02-02 04:08:40.318  INFO 22836 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-02 04:08:40.420  INFO 22836 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 18 JPA repository interfaces.
+2024-02-02 04:08:40.475  INFO 22836 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-02-02 04:08:40.660  INFO 22836 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:a8cee553-3dc4-487a-9ce8-b823b05e0a5d;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-02-02 04:08:40.957  INFO 22836 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-02 04:08:41.011  INFO 22836 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-02 04:08:41.167  INFO 22836 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-02 04:08:41.294  INFO 22836 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: create table actor (actor_id bigint generated by default as identity, cast_en varchar(255), casting varchar(255), people_nm varchar(255), people_nm_en varchar(255), movie_id bigint, primary key (actor_id))
+Hibernate: create table back_drop (back_drop_id bigint generated by default as identity, back_drop_image_url varchar(255), movie_id bigint, primary key (back_drop_id))
+Hibernate: create table box_office_movie (box_office_id bigint generated by default as identity, audi_acc varchar(255) not null, movie_cd varchar(255), movie_nm varchar(255), open_dt varchar(255), movie_rank varchar(255), movie_id bigint, primary key (box_office_id))
+Hibernate: create table comments (comment_id bigint generated by default as identity, created_at timestamp, last_modified_at timestamp, content TEXT, score double not null, member_id bigint not null, movie_id bigint not null, primary key (comment_id))
+Hibernate: create table director (director_id bigint generated by default as identity, people_nm varchar(255), people_nm_en varchar(255), movie_id bigint, primary key (director_id))
+Hibernate: create table foreign_box_office (foreign_box_office_id bigint generated by default as identity, audi_acc varchar(255) not null, movie_cd varchar(255), movie_nm varchar(255), open_dt varchar(255), movie_rank varchar(255), movie_id bigint, primary key (foreign_box_office_id))
+Hibernate: create table genre (genre_id bigint generated by default as identity, genre_nm varchar(255), movie_id bigint, primary key (genre_id))
+Hibernate: create table genre_box_office (genre_box_office_id bigint generated by default as identity, audi_acc varchar(255) not null, movie_cd varchar(255), movie_nm varchar(255), open_dt varchar(255), movie_rank varchar(255), movie_id bigint, primary key (genre_box_office_id))
+Hibernate: create table korea_box_office (korea_box_office_id bigint generated by default as identity, audi_acc varchar(255) not null, movie_cd varchar(255), movie_nm varchar(255), open_dt varchar(255), movie_rank varchar(255), movie_id bigint, primary key (korea_box_office_id))
+Hibernate: create table member (member_id bigint generated by default as identity, created_at timestamp, last_modified_at timestamp, email varchar(255) not null, password varchar(255), profile_image_url varchar(255), user_name varchar(255), primary key (member_id))
+Hibernate: create table member_roles (member_member_id bigint not null, roles varchar(255))
+Hibernate: create table movie (movie_id bigint generated by default as identity, created_at timestamp, last_modified_at timestamp, movie_cd varchar(255) not null, movie_nm varchar(255) not null, movie_nm_en varchar(255) not null, movie_nm_og varchar(255) not null, open_dt varchar(255) not null, prdt_stat_nm varchar(255) not null, prdt_year varchar(255) not null, show_tm varchar(255) not null, type_nm varchar(255) not null, primary key (movie_id))
+Hibernate: create table movie_audit (audit_id bigint generated by default as identity, audit_no varchar(255), watch_grade_nm varchar(255), movie_id bigint, primary key (audit_id))
+Hibernate: create table nation (nation_id bigint generated by default as identity, nation_nm varchar(255), movie_id bigint, primary key (nation_id))
+Hibernate: create table plot (plot_id bigint generated by default as identity, plot_text text, movie_id bigint, primary key (plot_id))
+Hibernate: create table poster (poster_id bigint generated by default as identity, poster_image_url varchar(255), movie_id bigint, primary key (poster_id))
+Hibernate: create table still_cut (still_cut_id bigint generated by default as identity, still_cut_url varchar(255), movie_id bigint, primary key (still_cut_id))
+Hibernate: create table trailer (trailer_id bigint generated by default as identity, trailer_url varchar(255), vod_class varchar(255), movie_id bigint, primary key (trailer_id))
+Hibernate: create table youtube_review (review_id bigint generated by default as identity, thumbnail varchar(255), youtube_channel varchar(255), youtube_review_url varchar(255), movie_id bigint, primary key (review_id))
+Hibernate: alter table comments drop constraint if exists UKo5metmwc6q5b7arf2wq0plcqx
+Hibernate: alter table comments add constraint UKo5metmwc6q5b7arf2wq0plcqx unique (member_id, movie_id)
+Hibernate: alter table member drop constraint if exists UK_mbmcqelty0fbrvxp1q58dn57t
+Hibernate: alter table member add constraint UK_mbmcqelty0fbrvxp1q58dn57t unique (email)
+Hibernate: alter table actor add constraint FKj1v8ubnn1t4547r4q725paa8h foreign key (movie_id) references movie
+Hibernate: alter table back_drop add constraint FKs7yr69rkn8xegknnvty3vq8xb foreign key (movie_id) references movie
+Hibernate: alter table box_office_movie add constraint FKtpu73xlpshqtr2aq1mv6hxugt foreign key (movie_id) references movie
+Hibernate: alter table comments add constraint FK5my97to6xmqeuycmeelttgj44 foreign key (member_id) references member
+Hibernate: alter table comments add constraint FKk4afod0bluaff04jkuj08n7lk foreign key (movie_id) references movie
+Hibernate: alter table director add constraint FKiq62npf9kasspaspcyqv5c3bl foreign key (movie_id) references movie
+Hibernate: alter table foreign_box_office add constraint FKm6ukgyd5rv0ert5fg3159w5o2 foreign key (movie_id) references movie
+Hibernate: alter table genre add constraint FKesy45nvxot9jyisct4o3s3l3l foreign key (movie_id) references movie
+Hibernate: alter table genre_box_office add constraint FKdxpiyly9gkk6ckhq623vacu3w foreign key (movie_id) references movie
+Hibernate: alter table korea_box_office add constraint FKma3t8h7111idpv3svrse8snj foreign key (movie_id) references movie
+Hibernate: alter table member_roles add constraint FKruptm2dtwl95mfks4bnhv828k foreign key (member_member_id) references member
+Hibernate: alter table movie_audit add constraint FK2m2ltkdgwxx0avdl3x1k2m41h foreign key (movie_id) references movie
+Hibernate: alter table nation add constraint FKk4p6pyhmkuxao2r0newovxn9x foreign key (movie_id) references movie
+Hibernate: alter table plot add constraint FKtilhfdw1lk4rehf0sxuqnlsc1 foreign key (movie_id) references movie
+Hibernate: alter table poster add constraint FK58435c9399bv4paa6mm986i39 foreign key (movie_id) references movie
+Hibernate: alter table still_cut add constraint FKsofwk6av2aafn5qdm43qgphqw foreign key (movie_id) references movie
+Hibernate: alter table trailer add constraint FKlmdmm3oncdy18v4008cssh81t foreign key (movie_id) references movie
+Hibernate: alter table youtube_review add constraint FKf3c790mfd7ma8rooibe7rerp1 foreign key (movie_id) references movie
+2024-02-02 04:08:42.086  INFO 22836 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-02 04:08:42.094  INFO 22836 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-02 04:08:42.934  INFO 22836 --- [    Test worker] c.s.s.comment.CommentRepositoryTest      : Started CommentRepositoryTest in 3.425 seconds (JVM running for 4.586)
+2024-02-02 04:08:42.960  INFO 22836 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@28a2a3e7 testClass = CommentRepositoryTest, testInstance = com.sundayCinema.sundayCinema.comment.CommentRepositoryTest@22ee2d0, testMethod = saveCommentTest@CommentRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3f2049b6 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.sundayCinema.sundayCinema.SundayCinemaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@43b4fe19, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6256ac4f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3917d366, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@452ba1db, [ImportsContextCustomizer@10b3df93 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c041b41, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1cb3ec38, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@7e2e0b8a]; rollback [true]
+Hibernate: select member0_.member_id as member_i1_9_0_, member0_.created_at as created_2_9_0_, member0_.last_modified_at as last_mod3_9_0_, member0_.email as email4_9_0_, member0_.password as password5_9_0_, member0_.profile_image_url as profile_6_9_0_, member0_.user_name as user_nam7_9_0_ from member member0_ where member0_.member_id=?
+Hibernate: insert into member (member_id, created_at, last_modified_at, email, password, profile_image_url, user_name) values (default, ?, ?, ?, ?, ?, ?)
+Hibernate: select movie0_.movie_id as movie_id1_11_7_, movie0_.created_at as created_2_11_7_, movie0_.last_modified_at as last_mod3_11_7_, movie0_.movie_cd as movie_cd4_11_7_, movie0_.movie_nm as movie_nm5_11_7_, movie0_.movie_nm_en as movie_nm6_11_7_, movie0_.movie_nm_og as movie_nm7_11_7_, movie0_.open_dt as open_dt8_11_7_, movie0_.prdt_stat_nm as prdt_sta9_11_7_, movie0_.prdt_year as prdt_ye10_11_7_, movie0_.show_tm as show_tm11_11_7_, movie0_.type_nm as type_nm12_11_7_, backdrop1_.back_drop_id as back_dro1_1_0_, backdrop1_.back_drop_image_url as back_dro2_1_0_, backdrop1_.movie_id as movie_id3_1_0_, boxofficem2_.box_office_id as box_offi1_2_1_, boxofficem2_.audi_acc as audi_acc2_2_1_, boxofficem2_.movie_id as movie_id7_2_1_, boxofficem2_.movie_cd as movie_cd3_2_1_, boxofficem2_.movie_nm as movie_nm4_2_1_, boxofficem2_.open_dt as open_dt5_2_1_, boxofficem2_.movie_rank as movie_ra6_2_1_, foreignbox3_.foreign_box_office_id as foreign_1_5_2_, foreignbox3_.audi_acc as audi_acc2_5_2_, foreignbox3_.movie_id as movie_id7_5_2_, foreignbox3_.movie_cd as movie_cd3_5_2_, foreignbox3_.movie_nm as movie_nm4_5_2_, foreignbox3_.open_dt as open_dt5_5_2_, foreignbox3_.movie_rank as movie_ra6_5_2_, genreboxof4_.genre_box_office_id as genre_bo1_7_3_, genreboxof4_.audi_acc as audi_acc2_7_3_, genreboxof4_.movie_id as movie_id7_7_3_, genreboxof4_.movie_cd as movie_cd3_7_3_, genreboxof4_.movie_nm as movie_nm4_7_3_, genreboxof4_.open_dt as open_dt5_7_3_, genreboxof4_.movie_rank as movie_ra6_7_3_, koreaboxof5_.korea_box_office_id as korea_bo1_8_4_, koreaboxof5_.audi_acc as audi_acc2_8_4_, koreaboxof5_.movie_id as movie_id7_8_4_, koreaboxof5_.movie_cd as movie_cd3_8_4_, koreaboxof5_.movie_nm as movie_nm4_8_4_, koreaboxof5_.open_dt as open_dt5_8_4_, koreaboxof5_.movie_rank as movie_ra6_8_4_, plot6_.plot_id as plot_id1_14_5_, plot6_.movie_id as movie_id3_14_5_, plot6_.plot_text as plot_tex2_14_5_, poster7_.poster_id as poster_i1_15_6_, poster7_.movie_id as movie_id3_15_6_, poster7_.poster_image_url as poster_i2_15_6_ from movie movie0_ left outer join back_drop backdrop1_ on movie0_.movie_id=backdrop1_.movie_id left outer join box_office_movie boxofficem2_ on movie0_.movie_id=boxofficem2_.movie_id left outer join foreign_box_office foreignbox3_ on movie0_.movie_id=foreignbox3_.movie_id left outer join genre_box_office genreboxof4_ on movie0_.movie_id=genreboxof4_.movie_id left outer join korea_box_office koreaboxof5_ on movie0_.movie_id=koreaboxof5_.movie_id left outer join plot plot6_ on movie0_.movie_id=plot6_.movie_id left outer join poster poster7_ on movie0_.movie_id=poster7_.movie_id where movie0_.movie_id=?
+Hibernate: insert into movie (movie_id, created_at, last_modified_at, movie_cd, movie_nm, movie_nm_en, movie_nm_og, open_dt, prdt_stat_nm, prdt_year, show_tm, type_nm) values (default, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select movie0_.movie_id as movie_id1_11_, movie0_.created_at as created_2_11_, movie0_.last_modified_at as last_mod3_11_, movie0_.movie_cd as movie_cd4_11_, movie0_.movie_nm as movie_nm5_11_, movie0_.movie_nm_en as movie_nm6_11_, movie0_.movie_nm_og as movie_nm7_11_, movie0_.open_dt as open_dt8_11_, movie0_.prdt_stat_nm as prdt_sta9_11_, movie0_.prdt_year as prdt_ye10_11_, movie0_.show_tm as show_tm11_11_, movie0_.type_nm as type_nm12_11_ from movie movie0_ where movie0_.movie_id=?
+Hibernate: select comment0_.comment_id as comment_1_3_0_, comment0_.created_at as created_2_3_0_, comment0_.last_modified_at as last_mod3_3_0_, comment0_.content as content4_3_0_, comment0_.member_id as member_i6_3_0_, comment0_.movie_id as movie_id7_3_0_, comment0_.score as score5_3_0_ from comments comment0_ where comment0_.comment_id=?
+Hibernate: insert into comments (comment_id, created_at, last_modified_at, content, member_id, movie_id, score) values (default, ?, ?, ?, ?, ?, ?)
+2024-02-02 04:08:43.248  INFO 22836 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@28a2a3e7 testClass = CommentRepositoryTest, testInstance = com.sundayCinema.sundayCinema.comment.CommentRepositoryTest@22ee2d0, testMethod = saveCommentTest@CommentRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3f2049b6 testClass = CommentRepositoryTest, locations = '{}', classes = '{class com.sundayCinema.sundayCinema.SundayCinemaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@43b4fe19, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@6256ac4f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3917d366, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@452ba1db, [ImportsContextCustomizer@10b3df93 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c041b41, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1cb3ec38, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2024. 2. 2. 오전 4:08:43</p>
+</div>
+</div>
+</body>
+</html>

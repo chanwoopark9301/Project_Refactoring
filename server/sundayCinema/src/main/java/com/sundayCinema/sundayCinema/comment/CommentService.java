@@ -34,37 +34,35 @@ public class CommentService {
     }
 
     // Create a new comment
-    public CommentDto.CommentResponseDto createComment(CommentDto.CommentPostDto commentPostDto,
-                                                       long memberId, long movieId, HttpServletRequest request) {
-        Member member = memberRepository.findById(memberId).orElse(null);
-        Movie movie = movieRepository.findById(movieId).orElse(null);
+    public CommentDto.CommentResponseDto createComment(CommentDto.CommentPostDto commentPostDto) {
+//        Member member = memberRepository.findById(memberId).orElse(null);
+//        Movie movie = movieRepository.findById(movieId).orElse(null);
 
-        if (member == null) {
-            // 사용자 또는 영화가 존재하지 않는 경우 처리
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
-        }
-        if (movie == null){
-            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
-        }
-        if(userAuthService.getSignedInUserEmail(request).equals(member.getEmail())) {
+//        if (member == null) {
+//            // 사용자 또는 영화가 존재하지 않는 경우 처리
+//            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
+//        }
+//        if (movie == null){
+//            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
+//        } // 추후 예외처리 코드 작성 필요
+
             double score = commentPostDto.getScore();
             String content = commentPostDto.getContent();
-            if (score < 0 || score > 5 || content.length() > 100) {
-                throw new InvalidInputException("평점(score)은 0에서 5 사이의 값이어야 하며, 댓글 내용(content)은 최대 100자여야 합니다.");
-            }
-            if (commentRepository.existsByMemberAndMovie(member, movie)) {
-                throw new DuplicateCommentException("이미 댓글과 평점을 작성했습니다.");
-            }
+//            if (score < 0 || score > 5 || content.length() > 100) {
+//                throw new InvalidInputException("평점(score)은 0에서 5 사이의 값이어야 하며, 댓글 내용(content)은 최대 100자여야 합니다.");
+//            }
+//            if (commentRepository.existsByMemberAndMovie(member, movie)) {
+//                throw new DuplicateCommentException("이미 댓글과 평점을 작성했습니다.");
+//            } // 추후 예외처리 코드 작성
             Comment comment = commentMapper.commentPostDtoToComment(commentPostDto);
+            Member member = memberRepository.findById(commentPostDto.getMemberId()).orElseThrow();
+            Movie movie = movieRepository.findByMovieId(commentPostDto.getMovieId());
             comment.setMember(member);
             comment.setMovie(movie);
             comment = commentRepository.save(comment);
             CommentDto.CommentResponseDto commentResponseDto = commentMapper.commentToCommentResponseDto(comment);
             return commentResponseDto;
-        }else {
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
         }
-    }
 
     // Update an existing comment
     public CommentDto.CommentResponseDto updateComment(CommentDto.CommentPatchDto commentPatchDto,long memberId,

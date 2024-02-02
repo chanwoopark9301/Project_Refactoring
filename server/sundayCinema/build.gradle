@@ -24,7 +24,6 @@ repositories {
 }
 
 dependencies {
-
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -35,6 +34,8 @@ dependencies {
 	implementation 'com.google.code.gson:gson'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 	implementation 'com.google.api-client:google-api-client:1.31.1'
 	implementation 'com.google.apis:google-api-services-youtube:v3-rev20210915-1.32.1'
 	runtimeOnly 'com.mysql:mysql-connector-j'
@@ -47,8 +48,9 @@ dependencies {
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+	runtimeOnly 'com.h2database:h2'
 }
 
-//tasks.named('test') {
-//	useJUnitPlatform()
-//}
+test {
+	useJUnitPlatform()
+}

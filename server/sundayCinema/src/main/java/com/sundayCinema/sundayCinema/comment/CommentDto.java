@@ -9,10 +9,15 @@ public class CommentDto {
     @Getter
     @Setter
     public static class CommentPostDto {
+        public CommentPostDto(String content, double score, Long movieId, Long memberId) {
+            this.content = content;
+            this.score = score;
+            this.movieId = movieId;
+            this.memberId = memberId;
+        }
+
         @NotBlank(message = "댓글 내용은 비어있을 수 없습니다.")
         private String content;
-
-
 
         @NotNull(message = "평점은 필수 입력 항목입니다.")
         private double score;

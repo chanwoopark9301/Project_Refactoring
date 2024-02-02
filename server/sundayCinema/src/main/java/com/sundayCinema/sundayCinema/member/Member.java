@@ -18,7 +18,7 @@ import java.util.List;
 public class Member extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long memberId;
+    private Long memberId;
 
     @Column
     private String userName;
@@ -38,7 +38,12 @@ public class Member extends Auditable {
     public Member(String email) {
         this.email = email;
     }
-
+    public Member(Long memberId, String userName, String email, String password){
+        this.memberId = memberId;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
     public Member(String userName, String email,
                   String password,
                   List<String> roles,

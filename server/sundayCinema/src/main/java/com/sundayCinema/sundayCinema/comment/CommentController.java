@@ -23,16 +23,12 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @PostMapping
+    @PostMapping("/post")
     public ResponseEntity<CommentDto.CommentResponseDto> createComment(
-            @Valid @RequestBody CommentDto.CommentPostDto commentPostDto,
-            @RequestParam("memberId") long memberId,
-            @RequestParam("movieId") long movieId,
-            HttpServletRequest request) {
+            @Valid @RequestBody CommentDto.CommentPostDto commentPostDto) {
 
 
-        CommentDto.CommentResponseDto response = commentService.createComment(commentPostDto, memberId,movieId, request);
-
+        CommentDto.CommentResponseDto response = commentService.createComment(commentPostDto);
 
         return ResponseEntity.ok(response);
     }

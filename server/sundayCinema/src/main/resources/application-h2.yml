@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: your-application-name
+  main:
+    banner-mode: "off" # 배너 출력 끄기 (선택 사항)
+  logging:
+    level:
+      com.sundayCinema.sundayCinema.movie.api.TMDB: DEBUG
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: off
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: ${SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT-ID}
+            clientSecret: ${SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_GOOGLE_CLIENT-SECRET}
+  youtubeApiKey: ${YOUTUBE_API_KEY}
+  KdmbApiKey: ${KDMB_API_KEY}
+  KobisApiKEY: ${KOBIS_API_KEY}
+#  tmdbKey : ${TMDB_API_KEY}
+jwt:
+  key:
+    secret: ${JWT_SECRET_KEY}
+  access-token-expiration-minutes: 30
+  refresh-token-expiration-minutes: 429

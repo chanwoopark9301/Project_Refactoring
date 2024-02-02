@@ -33,8 +33,6 @@ public class Comment extends Auditable {
     @JoinColumn(name = "member_id", nullable = false)
     private Member member; // 댓글을 작성한 사용자
 
-
-
     // 생성자 및 게터/세터는 생략 (이미 작성된 코드와 동일)
 
     // 이하 평균평점 계산 및 관련 기능 추가 가능

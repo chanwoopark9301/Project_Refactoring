@@ -33,7 +33,7 @@ public class MemberDto {
     @NoArgsConstructor
     @Setter
     public static class MemberPatchDto{
-
+        private Long memberId;
         private String userName;
         private String password;
     }
@@ -42,7 +42,7 @@ public class MemberDto {
     @Setter
     @AllArgsConstructor
     public static class MemberResponseDto {
-        private long memberId;
+        private Long memberId;
 
         private String email;
 
