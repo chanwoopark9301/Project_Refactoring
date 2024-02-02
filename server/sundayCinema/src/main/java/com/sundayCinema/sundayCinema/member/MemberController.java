@@ -34,19 +34,18 @@ public class MemberController {
 
     @PatchMapping("/patch")
     public ResponseEntity patchMember(
-            @Valid @RequestBody MemberDto.MemberPatchDto memberPatchDto, HttpServletRequest request) {
+            @Valid @RequestBody MemberDto.MemberPatchDto memberPatchDto) {
 
 
-        Member member = memberService.updateMember(mapper.memberPatchDtoToMember(memberPatchDto), request);
+        Member member = memberService.updateMember(mapper.memberPatchDtoToMember(memberPatchDto));
 
         return new ResponseEntity<>(
                 new MemberDto.SingleResponseDto<>(mapper.memberToMemberResponseDto(member)),
                 HttpStatus.OK);
     }
     @GetMapping("/get")
-    public ResponseEntity getMember(HttpServletRequest request){
-        Member member = memberService.findMember(request);
-
+    public ResponseEntity getMember(){
+        Member member = memberService.verifyExistsEmail();
         return new ResponseEntity<>(
                 new MemberDto.SingleResponseDto<>(mapper.memberToMemberResponseDto(member))
                 , HttpStatus.OK);

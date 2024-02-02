@@ -17,8 +17,8 @@ public class Actor {
     private String peopleNm;
     @Column
     private String peopleNmEn;
-    @Column
-    private String casting;
+    @Column(name = "casting")
+    private String cast;
     @Column
     private String castEn;
     @ManyToOne   //

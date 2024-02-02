@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,14 +26,13 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
     private final CustomAuthorityUtils authorityUtils;
-    private final UserAuthService userAuthService;
     @Lazy
     public MemberService(MemberRepository memberRepository, PasswordEncoder passwordEncoder,
-                         CustomAuthorityUtils authorityUtils, UserAuthService userAuthService) {
+                         CustomAuthorityUtils authorityUtils) {
         this.memberRepository = memberRepository;
         this.passwordEncoder = passwordEncoder;
         this.authorityUtils = authorityUtils;
-        this.userAuthService = userAuthService;
+
     }
 
 
@@ -62,13 +63,13 @@ public class MemberService {
                 member.getProfileImageUrl()
         );
 
-        verifyExistsEmail(member.getEmail());
+        verifyExistsEmail();
         Member savedMember = memberRepository.save(beSavedMember);
         return savedMember;
     }
 
-    public Member updateMember(Member member ,HttpServletRequest request)  {
-        Member findMember = findVerifiedMember(request);
+    public Member updateMember(Member member)  {
+        Member findMember = verifyExistsEmail();
 
         Optional.ofNullable(member.getPassword())
                 .ifPresent(password -> findMember.setPassword(password));
@@ -76,11 +77,6 @@ public class MemberService {
                 .ifPresent(userName -> findMember.setUserName(userName));
         return memberRepository.save(findMember);
     }
-    @Transactional(readOnly = true)
-    public Member findMember(HttpServletRequest request)  {
-        return findVerifiedMember(request);
-    }
-
 
     public Page<Member> findMembers(int page, int size) {
         return memberRepository.findAll(PageRequest.of(page, size,
@@ -88,24 +84,21 @@ public class MemberService {
     }
 
     public void deleteMember(HttpServletRequest request)  {
-        Member findMember = findVerifiedMember(request);
+        Member findMember = verifyExistsEmail();
 
         memberRepository.delete(findMember);
     }
 
-    @Transactional(readOnly = true)
-    public Member findVerifiedMember(HttpServletRequest request) {
-        String findEmail = userAuthService.getSignedInUserEmail(request);
-        Optional<Member> optionalMember = memberRepository.findByEmail(findEmail);
-        return optionalMember.orElseThrow(() -> new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
 
+    public Member verifyExistsEmail() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication != null && authentication.isAuthenticated()) {
+            String email = authentication.getName();
+            return memberRepository.findByEmail(email)
+                    .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
+        } else {
+            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
+        }
     }
-
-    private void verifyExistsEmail(String email)  {
-        Optional<Member> member = memberRepository.findByEmail(email);
-        if (member.isPresent())
-            throw new BusinessLogicException(ExceptionCode.MEMBER_EXISTS);
-    }
-
-
 }

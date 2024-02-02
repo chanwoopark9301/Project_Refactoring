@@ -9,6 +9,8 @@ import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieReposit
 import org.apache.tomcat.util.http.parser.HttpParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,15 +22,13 @@ public class CommentService {
 
     private final CommentRepository commentRepository;
     private final CommentMapper commentMapper;
-    private final UserAuthService userAuthService;
     private final MemberRepository memberRepository;
     private final MovieRepository movieRepository;
 
     public CommentService(CommentRepository commentRepository, CommentMapper commentMapper,
-                          UserAuthService userAuthService, MemberRepository memberRepository, MovieRepository movieRepository) {
+                            MemberRepository memberRepository, MovieRepository movieRepository) {
         this.commentRepository = commentRepository;
         this.commentMapper = commentMapper;
-        this.userAuthService = userAuthService;
         this.memberRepository = memberRepository;
         this.movieRepository = movieRepository;
     }
@@ -45,7 +45,7 @@ public class CommentService {
 //        if (movie == null){
 //            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
 //        } // 추후 예외처리 코드 작성 필요
-
+            verifyExistsEmail();
             double score = commentPostDto.getScore();
             String content = commentPostDto.getContent();
 //            if (score < 0 || score > 5 || content.length() > 100) {
@@ -67,18 +67,17 @@ public class CommentService {
     // Update an existing comment
     public CommentDto.CommentResponseDto updateComment(CommentDto.CommentPatchDto commentPatchDto,long memberId,
                                                        long movieId, HttpServletRequest request) {
-        Member member = memberRepository.findById(memberId).orElse(null);
-        Movie movie = movieRepository.findById(movieId).orElse(null);
+//        Member member = memberRepository.findById(memberId).orElse(null);
+//        Movie movie = movieRepository.findById(movieId).orElse(null);
 
-        if (member == null) {
-            // 사용자 또는 영화가 존재하지 않는 경우 처리
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
-        }
-        if (movie == null){
-            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
-        }
-
-        if(userAuthService.getSignedInUserEmail(request).equals(member.getEmail())) {
+//        if (member == null) {
+//            // 사용자 또는 영화가 존재하지 않는 경우 처리
+//            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
+//        }
+//        if (movie == null){
+//            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
+//        }
+//
 
         Comment comment = commentRepository.findById(commentPatchDto.getCommentId()).orElse(null);
         if (comment != null) {
@@ -93,27 +92,24 @@ public class CommentService {
             return commentMapper.commentToCommentResponseDto(comment);
         }
         return null;
-        }else {
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
         }
 
-    }
+
 
     // Get comments for a movie
-    public CommentDto.CommentResponseDto getCommentsForMovie(long movieId, long memberId, HttpServletRequest request) {
-        // 사용자와 영화 정보 가져오기
-        Member member = memberRepository.findById(memberId)
-                .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
-        Movie movie = movieRepository.findById(movieId)
-                .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND));
+    public CommentDto.CommentResponseDto getCommentsForMovie(long movieId, long memberId) {
+//        // 사용자와 영화 정보 가져오기
+//        Member member = memberRepository.findById(memberId)
+//                .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
+//        Movie movie = movieRepository.findById(movieId)
+//                .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND));
 
-        // 현재 로그인한 사용자의 이메일 가져오기
-        String signedInUserEmail = userAuthService.getSignedInUserEmail(request);
 
-        // 현재 로그인한 사용자의 이메일과 회원의 이메일 비교
-        if (!signedInUserEmail.equals(member.getEmail())) {
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
-        }
+//        // 현재 로그인한 사용자의 이메일과 회원의 이메일 비교
+//        if (!signedInUserEmail.equals(member.getEmail())) {
+//            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
+//        }
+        verifyExistsEmail();
 
         // 영화에 대한 댓글 가져오기
         Optional<Comment> commentOptional = commentRepository.findByMovieMovieIdAndMemberMemberId(movieId,memberId);
@@ -150,20 +146,19 @@ public class CommentService {
 
 
     // Delete a comment
-    public boolean deleteComment(long commentId, long memberId, long movieId, HttpServletRequest request) {
-        Member member = memberRepository.findById(memberId).orElse(null);
-        Movie movie = movieRepository.findById(movieId).orElse(null);
+    public boolean deleteComment(long commentId) {
+            verifyExistsEmail();
+//        Member member = memberRepository.findById(memberId).orElse(null);
+//        Movie movie = movieRepository.findById(movieId).orElse(null);
 
-        if (member == null) {
-            // 사용자 또는 영화가 존재하지 않는 경우 처리
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
-        }
-        if (movie == null){
-            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
-        }
-
-
-        if(userAuthService.getSignedInUserEmail(request).equals(member.getEmail())) {
+//        if (member == null) {
+//            // 사용자 또는 영화가 존재하지 않는 경우 처리
+//            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
+//        }
+//        if (movie == null){
+//            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
+//        }
+//
 
         Comment comment = commentRepository.findById(commentId).orElse(null);
         if (comment != null) {
@@ -171,10 +166,8 @@ public class CommentService {
             return true;
         }
         return false;
-        }else {
-            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
-        }
     }
+
 
     // Calculate average rating for a movie
     public double calculateAverageRatingForMovie(Long movieId) {
@@ -196,6 +189,18 @@ public class CommentService {
         }
         double totalScore = comments.stream().mapToDouble(Comment::getScore).sum();
         return totalScore / comments.size();
+    }
+
+    private Member verifyExistsEmail() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        if (authentication != null && authentication.isAuthenticated()) {
+            String email = authentication.getName();
+            return memberRepository.findByEmail(email)
+                    .orElseThrow(() -> new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND));
+        } else {
+            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_SIGNED_IN);
+        }
     }
 
 }
