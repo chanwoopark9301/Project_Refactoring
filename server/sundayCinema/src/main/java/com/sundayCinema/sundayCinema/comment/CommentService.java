@@ -8,6 +8,7 @@ import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
 import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
 import org.apache.tomcat.util.http.parser.HttpParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -65,8 +66,7 @@ public class CommentService {
         }
 
     // Update an existing comment
-    public CommentDto.CommentResponseDto updateComment(CommentDto.CommentPatchDto commentPatchDto,long memberId,
-                                                       long movieId, HttpServletRequest request) {
+    public CommentDto.CommentResponseDto updateComment(CommentDto.CommentPatchDto commentPatchDto) {
 //        Member member = memberRepository.findById(memberId).orElse(null);
 //        Movie movie = movieRepository.findById(movieId).orElse(null);
 
@@ -125,6 +125,7 @@ public class CommentService {
         // Comment 객체를 CommentResponseDto로 변환하여 반환
 
     }
+    @Cacheable(value = "getAllCommentsForMovie")
     public List<CommentDto.CommentResponseDto> getAllCommentsForMovie(long movieId) {
         // 사용자와 영화 정보 가져오기
 
@@ -148,17 +149,7 @@ public class CommentService {
     // Delete a comment
     public boolean deleteComment(long commentId) {
             verifyExistsEmail();
-//        Member member = memberRepository.findById(memberId).orElse(null);
-//        Movie movie = movieRepository.findById(movieId).orElse(null);
-
-//        if (member == null) {
-//            // 사용자 또는 영화가 존재하지 않는 경우 처리
-//            throw new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
-//        }
-//        if (movie == null){
-//            throw new BusinessLogicException(ExceptionCode.MOVIE_NOT_FOUND);
-//        }
-//
+// 영화와 회원이 존재하지 않는 경우 예외 처리 필요
 
         Comment comment = commentRepository.findById(commentId).orElse(null);
         if (comment != null) {
@@ -167,9 +158,10 @@ public class CommentService {
         }
         return false;
     }
-
+    //터미네이터 평균 평점 4.0 2만명 //////    총합 평점+3.0/2만+1  --> redis 캐시 반영구적
 
     // Calculate average rating for a movie
+    @Cacheable(value = "calculateAverageRatingForMovie")
     public double calculateAverageRatingForMovie(Long movieId) {
         // memberId가 null이면 Bad Request로 처리
 

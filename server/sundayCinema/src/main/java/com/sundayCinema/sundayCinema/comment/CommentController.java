@@ -36,18 +36,14 @@ public class CommentController {
 
     @PatchMapping("/{commentId}")
     public ResponseEntity<CommentDto.CommentResponseDto> updateComment(
-            @PathVariable("commentId") long commentId,
-            @Valid @RequestBody CommentDto.CommentPatchDto commentPatchDto,
-            @RequestParam(name = "memberId", required = true, defaultValue = "0") long memberId,
-            @RequestParam(name = "movieId", required = true, defaultValue = "0") long movieId,
-            HttpServletRequest request) {
+            @PathVariable("commentId") Long commentId,
+            @Valid @RequestBody CommentDto.CommentPatchDto commentPatchDto) {
         commentPatchDto.setCommentId(commentId);
 
-        CommentDto.CommentResponseDto response = commentService.updateComment(commentPatchDto, memberId, movieId, request);
-        if (response != null) {
-            return ResponseEntity.ok(response);
-        }
-        return ResponseEntity.notFound().build();
+        CommentDto.CommentResponseDto response = commentService.updateComment(commentPatchDto);
+
+        return ResponseEntity.ok(response);
+
     }
 
 
@@ -100,6 +96,5 @@ public class CommentController {
         double averageRating = commentService.calculateAverageRatingForMovie(movieId);
         return ResponseEntity.ok(averageRating);
     }
-
 
 }

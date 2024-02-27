@@ -11,6 +11,7 @@ import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.ForeignBoxOf
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.GenreBoxOfficeRepository;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.KoreaBoxOfficeRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -52,6 +53,7 @@ public class BoxOfficeSwitchService {
         }
 
     }
+    @Cacheable(value = "Top10ReadMapper.findTop10")
     public List<BoxOfficeMovieDto> loadBoxOfficeByBoxNm(String boxOfficeCd) {
         List<BoxOfficeMovieDto> boxOfficeMovieDtos = new ArrayList<>();
 

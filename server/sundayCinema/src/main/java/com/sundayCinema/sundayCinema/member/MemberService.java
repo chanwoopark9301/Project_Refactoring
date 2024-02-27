@@ -5,7 +5,9 @@ import com.sundayCinema.sundayCinema.exception.BusinessLogicException;
 import com.sundayCinema.sundayCinema.exception.ExceptionCode;
 import com.sundayCinema.sundayCinema.logIn.utils.CustomAuthorityUtils;
 import com.sundayCinema.sundayCinema.logIn.utils.UserAuthService;
+import lombok.Synchronized;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -13,6 +15,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,16 +39,19 @@ public class MemberService {
 
     }
 
-
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, readOnly = false, timeout = 30)
     public Member createMember(Member member) {
+        try{
+            String encryptedPassword = passwordEncoder.encode(member.getPassword());
+            member.setPassword(encryptedPassword);
+            List<String> roles = authorityUtils.createRoles(member.getEmail());
+            member.setRoles(roles);
+            Member savedMember = memberRepository.save(member);
 
-        String encryptedPassword = passwordEncoder.encode(member.getPassword());
-        member.setPassword(encryptedPassword);
-        List<String> roles = authorityUtils.createRoles(member.getEmail());
-        member.setRoles(roles);
-        Member savedMember = memberRepository.save(member);
-
-        return savedMember;
+            return savedMember;
+        }catch (DataIntegrityViolationException e){
+            throw new BusinessLogicException(ExceptionCode.MEMBER_EXISTS);
+        }
     }
     //POST(OAuth2.0 회원 등록) : OAuth2.0 를 통해 가입된 회원 정보 저장 (DB에 해당 정보 존재하면 해당 엔티티 리턴하고 존재하지 않으면 저장)
     public Member createMemberOAuth2(Member member) {

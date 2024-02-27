@@ -5,107 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356a59ac-943c-4e71-ada2-883c1738e744" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/SECURITY_Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/advice/cache/EhcacheConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/advice/cache/EhcacheController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPatchDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPatchDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPostDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/MyController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Actor.class.uniqueId30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ActorRepository.class.uniqueId57" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BackDrop.class.uniqueId5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BackDropRepository.class.uniqueId62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxOfficeMovie.class.uniqueId23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxOfficeMovieMapper.class.uniqueId39" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxOfficeMovieRepository.class.uniqueId18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxOfficeSwitchService.class.uniqueId12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxofficeResponse$BoxofficeData.class.uniqueId36" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BoxofficeResponse.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Comment.class.uniqueId45" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentController.class.uniqueId16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentMapper.class.uniqueId29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentMapperImpl.class.uniqueId44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentMapperImpl.java.uniqueId28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentRepository.class.uniqueId52" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentService.class.uniqueId53" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Director.class.uniqueId19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DirectorRepository.class.uniqueId15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ForeignBoxOffice.class.uniqueId11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ForeignBoxOfficeRepository.class.uniqueId27" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Genre.class.uniqueId25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GenreBoxOffice.class.uniqueId69" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GenreBoxOfficeRepository.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GenreMovieMapper.class.uniqueId47" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GenreRepository.class.uniqueId14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JwtAuthenticationFilter.class.uniqueId51" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/JwtVerificationFilter.class.uniqueId38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KdmbService$UrlParameterBuilder.class.uniqueId22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KdmbService.class.uniqueId9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KobisRepoService.class.uniqueId21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KobisService.class.uniqueId10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KoreaBoxOffice.class.uniqueId65" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/KoreaBoxOfficeRepository.class.uniqueId24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MediaRepoService.class.uniqueId64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Member.class.uniqueId58" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberController.class.uniqueId35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberDetailsService$MemberDetails.class.uniqueId37" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberDetailsService.class.uniqueId26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberMapper.class.uniqueId41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberMapperImpl.class.uniqueId70" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberMapperImpl.java.uniqueId63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberRepository.class.uniqueId34" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MemberService.class.uniqueId67" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Movie.class.uniqueId68" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieAudit.class.uniqueId60" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieAuditRepository.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieController.class.uniqueId55" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieDetailsMapper.class.uniqueId59" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieRepository.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieResponse$MovieItem.class.uniqueId48" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieResponse.class.uniqueId49" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MovieService.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Nation.class.uniqueId43" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/NationRepository.class.uniqueId32" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/OAuth2MemberSuccessHandler.class.uniqueId33" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Plot.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PlotRepository.class.uniqueId66" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Poster.class.uniqueId17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PosterRepository.class.uniqueId61" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfiguration$CorsFilter.class.uniqueId50" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfiguration$CustomFilterConfigurer.class.uniqueId40" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfiguration.class.uniqueId54" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StillCut.class.uniqueId20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StillCutRepository.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TmdbService.class.uniqueId13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Trailer.class.uniqueId56" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/TrailerRepository.class.uniqueId31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/YoutubeReview.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/YoutubeReviewRepository.class.uniqueId46" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/YoutubeService.class.uniqueId42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.sundayCinema.sundayCinema.comment.CommentRepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.sundayCinema.sundayCinema.comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.sundayCinema.sundayCinema.comment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-h2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-h2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-mysql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.sundayCinema.sundayCinema.comment.CommentRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentService.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/COMMENT_Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/COMMENT_Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CommentRepositoryTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/utils/MyController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/utils/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/controller/AuthController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-h2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-h2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-mysql.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +86,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,6 +95,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.5.1/c08b438bd19ba98419cf7919ba63e909f75b71c/mockito-core-4.5.1-sources.jar!/org/mockito/ArgumentMatchers.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.3.29/48b94e5ccf149c1932fc57bcaeba21ee5c921b4f/spring-context-5.3.29-sources.jar!/org/springframework/context/annotation/Primary.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/5.3.29/d6011dab146c8e6e76ae3c8dc0fefa20d4dbf39/spring-test-5.3.29-sources.jar!/org/springframework/test/web/servlet/MockMvc.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -168,7 +120,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/myProject/refectoring/main_project/server/sundayCinema&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/study/DB/JPAPractice/JPAPractice&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -190,7 +142,10 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.sundayCinema.sundayCinema.SundayCinemaApplication" />
       <module name="sundayCinema.main" />
-      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=h2" />
+      <selectedOptions>
+        <option name="environmentVariables" visible="false" />
+      </selectedOptions>
+      <option name="VM_PARAMETERS" value="-javaagent:$PROJECT_DIR$/../../../../../scouter/agent.java/scouter.agent.jar -Dscouter.config/$PROJECT_DIR$/../../../../../scouter/server/conf/scouter.conf -Dobj_name=demoTomcat --add-opens java.base/java.lang=ALL-UNNAMED -Dspring.profiles.active=mysql" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sundayCinema.sundayCinema.*" />
@@ -306,10 +261,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CommentControllerTest" />
         <item itemvalue="Gradle.CommentRepositoryTest" />
         <item itemvalue="애플리케이션.SundayCinemaApplication" />
         <item itemvalue="Gradle.CommentRepositoryTest.saveCommentTest" />
-        <item itemvalue="Gradle.CommentControllerTest" />
         <item itemvalue="Gradle.CommentControllerTest.postCommentTest" />
       </list>
     </recent_temporary>
@@ -324,6 +279,17 @@
       <updated>1705592422905</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

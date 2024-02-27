@@ -1,6 +1,6 @@
 spring:
   application:
-    name: your-application-name
+    name: sundayCinema
   main:
     banner-mode: "off" # 배너 출력 끄기 (선택 사항)
   logging:

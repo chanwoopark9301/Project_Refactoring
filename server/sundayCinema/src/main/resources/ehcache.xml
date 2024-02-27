@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <defaultCache
+            maxElementsInMemory="1000"
+            maxElementsOnDisk="0"
+            eternal="false"
+            statistics="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="10"
+            overflowToDisk="false"
+            diskPersistent="false"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache
+            name="Top10ReadMapper.findTop10"
+            maxElementsInMemory="50000"
+            maxElementsOnDisk="0"
+            eternal="false"
+            statistics="false"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="10"
+            overflowToDisk="false"
+            diskPersistent="false"
+            memoryStoreEvictionPolicy="LRU"/>
+    <cache
+            name="calculateAverageRatingForMovie"
+            maxElementsInMemory="50000"
+            maxElementsOnDisk="0"
+            eternal="false"
+            statistics="false"
+            timeToIdleSeconds="1000"
+            timeToLiveSeconds="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            memoryStoreEvictionPolicy="LRU"/>
+    <cache
+            name="getAllCommentsForMovie"
+            maxElementsInMemory="50000"
+            maxElementsOnDisk="0"
+            eternal="false"
+            statistics="false"
+            timeToIdleSeconds="1000"
+            timeToLiveSeconds="1000"
+            overflowToDisk="false"
+            diskPersistent="false"
+            memoryStoreEvictionPolicy="LRU"/>
+</ehcache>
