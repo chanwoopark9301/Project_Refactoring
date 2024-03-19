@@ -1,7 +1,7 @@
 package com.sundayCinema.sundayCinema.comment;
 
 import com.sundayCinema.sundayCinema.member.Member;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

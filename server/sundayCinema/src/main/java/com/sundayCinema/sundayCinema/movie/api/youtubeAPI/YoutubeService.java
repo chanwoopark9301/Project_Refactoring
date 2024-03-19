@@ -7,7 +7,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.YoutubeReview;
+import com.sundayCinema.sundayCinema.movie.entity.movieMediaInfo.YoutubeReview;
 import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
 import com.sundayCinema.sundayCinema.movie.repository.movieMediaRepo.YoutubeReviewRepository;
 import lombok.extern.slf4j.Slf4j;

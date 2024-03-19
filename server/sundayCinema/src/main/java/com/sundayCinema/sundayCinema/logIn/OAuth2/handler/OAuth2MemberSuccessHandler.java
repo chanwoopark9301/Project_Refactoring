@@ -49,7 +49,7 @@ public class OAuth2MemberSuccessHandler extends SimpleUrlAuthenticationSuccessHa
 
     private void saveMember(String email, String userName, String profileImageUrl) {
         Member member = new Member(email);
-        member.setUserName(userName);
+        member.setUsername(userName);
         member.setProfileImageUrl(profileImageUrl);
         memberService.createMemberOAuth2(member);
     }

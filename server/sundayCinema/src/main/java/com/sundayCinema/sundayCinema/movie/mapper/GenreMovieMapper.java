@@ -1,9 +1,9 @@
 package com.sundayCinema.sundayCinema.movie.mapper;
 
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.GenreMovieDto;
-import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutDto;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.StillCut;
+import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutVo;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMediaInfo.StillCut;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -20,12 +20,12 @@ public class GenreMovieMapper {
         }else{trailer= movie.getTrailers().get(0).getTrailer_url();}
         GenreMovieDto genreMovieDto = new GenreMovieDto();
 
-        ArrayList<StillCutDto> stillCutDtos=new ArrayList<>();
+        ArrayList<StillCutVo> stillCutVos =new ArrayList<>();
         for (int i = 0; i < movie.getStillCuts().size(); i++) {
-            StillCutDto stillCutDto = new StillCutDto();
+            StillCutVo stillCutVo = new StillCutVo();
             StillCut stillCut = movie.getStillCuts().get(i);
-            stillCutDto.setStillCut_url(stillCut.getStillCut_url());
-            stillCutDtos.add(stillCutDto);
+            stillCutVo.setStillCut_url(stillCut.getStillCut_url());
+            stillCutVos.add(stillCutVo);
         }
         genreMovieDto.movieId = movie.getMovieId();
         genreMovieDto.movieNm = movie.getMovieNm();
@@ -33,7 +33,7 @@ public class GenreMovieMapper {
         genreMovieDto.genre = genreNm;
         genreMovieDto.trailerUrl =trailer;
         genreMovieDto.backDrop = movie.getBackDrop().getBackDrop_image_url();
-        genreMovieDto.stillCut= stillCutDtos;
+        genreMovieDto.stillCut= stillCutVos;
         genreMovieDto.plot = movie.getPlot().getPlotText();
         return genreMovieDto;
     }

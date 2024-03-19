@@ -8,7 +8,7 @@ import java.util.List;
 @Getter
 @Setter
 public class DetailsMediaInfo{
-    public List<StillCutDto> stillCuts;
+    public List<StillCutVo> stillCuts;
     public String trailers;
     public String youtubeReviews;
 }

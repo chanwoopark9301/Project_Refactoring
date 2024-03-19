@@ -1,6 +1,6 @@
 package com.sundayCinema.sundayCinema.movie.dto.mainPageDto;
 
-import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutDto;
+import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutVo;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +15,7 @@ public class GenreMovieDto {
     public String movieNm;
     public String posterUrl;
     public String trailerUrl;
-    public List<StillCutDto> stillCut;
+    public List<StillCutVo> stillCut;
     public String plot;
     public String backDrop;
 }

@@ -3,13 +3,9 @@ package com.sundayCinema.sundayCinema.movie.api.KOBIS;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.sundayCinema.sundayCinema.movie.api.KMDB.KdmbService;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.*;
-import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.BoxOfficeMovieRepository;
-import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.ForeignBoxOfficeRepository;
-import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.KoreaBoxOfficeRepository;
-import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.*;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.BoxOfficeMovie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.MovieCategoryCode;
 import kr.or.kobis.kobisopenapi.consumer.rest.KobisOpenAPIRestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,8 +22,8 @@ public class KobisService {
     @Value("${KOBIS_API_KEY}")
     private String KobisApiKEY; // 발급받은 API 키 값을 입력해주세요
 
-    String boxResponse = "";
-    String movieResponse = "";
+    private String boxResponse = "";
+    private String movieResponse = "";
     //전날 박스오피스 조회 ( 오늘 날짜꺼는 안나옴.. )
     LocalDateTime time = LocalDateTime.now().minusDays(1);
     String targetDt = time.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
@@ -36,26 +32,26 @@ public class KobisService {
     String itemPerPage = "10";
 
     //다양성영화(Y)/상업영화(N)/전체(default)
-    String multiMovieYn = "N";
+    private final String multiMovieYn = "N";
 
-    //한국영화(K)/외국영화(F)/전체(default)
-    String repNationCd = "";
-    String repNationCd_Korean = "K";
-    String repNationCd_Foreign = "F";
+    //한국영화(K)/외국영화(F)/전체(default) -> enum 코드 사용
+//    String repNationCd = "";
+//    String repNationCd_Korean = "K";
+//    String repNationCd_Foreign = "F";
 
     //상영지역별 코드/전체(default)
-    String wideAreaCd = "";
+    private final String  wideAreaCd = "";
 
     String[] movieTypeCdArr = new String[0];
 
 
     // 탑텐 박스 오피스저장(박스오피스 객체)
 
-    public List<BoxOfficeMovie> searchingTop10BoxOffice(String repNationCd) throws Exception {
+    public List<BoxOfficeMovie> searchingTop10BoxOffice(MovieCategoryCode movieCategoryCode) throws Exception {
         KobisOpenAPIRestService service = new KobisOpenAPIRestService(KobisApiKEY);
 
         // 일일 박스오피스 서비스 호출 (boolean isJson, String targetDt, String itemPerPage,String multiMovieYn, String repNationCd, String wideAreaCd)
-        boxResponse = service.getDailyBoxOffice(true, targetDt, itemPerPage, multiMovieYn, repNationCd, wideAreaCd);
+        boxResponse = service.getDailyBoxOffice(true, targetDt, itemPerPage, multiMovieYn, movieCategoryCode.getValue(), wideAreaCd);
 
         BoxofficeResponse parsingResponse = parsingKobis(boxResponse);
         List<BoxOfficeMovie> dailyList = parsingResponse.getBoxOfficeResult().getDailyBoxOfficeList();
@@ -63,13 +59,13 @@ public class KobisService {
         return dailyList;
     }
 
-    //장르별 영화 검색(날짜 정보)
+    //특정 날짜에 따른 박스오피스 정보 검색
 
-    public List<BoxOfficeMovie> searchingGenreBoxOffice(String targetDt) throws Exception {
+    public List<BoxOfficeMovie> searchingGenreBoxOffice(String targetDt, MovieCategoryCode movieCategoryCode) throws Exception {
         KobisOpenAPIRestService service = new KobisOpenAPIRestService(KobisApiKEY);
 
         // 일일 박스오피스 서비스 호출 (boolean isJson, String targetDt, String itemPerPage,String multiMovieYn, String repNationCd, String wideAreaCd)
-        boxResponse = service.getDailyBoxOffice(true, targetDt, itemPerPage, multiMovieYn, repNationCd, wideAreaCd);
+        boxResponse = service.getDailyBoxOffice(true, targetDt, itemPerPage, multiMovieYn, String.valueOf(movieCategoryCode), wideAreaCd);
 
         BoxofficeResponse parsingResponse = parsingKobis(boxResponse);
         List<BoxOfficeMovie> genreList = parsingResponse.getBoxOfficeResult().getDailyBoxOfficeList();

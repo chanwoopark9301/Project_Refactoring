@@ -1,12 +1,10 @@
 package com.sundayCinema.sundayCinema.movie.mapper;
 
 import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.*;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Actor;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.StillCut;
+import com.sundayCinema.sundayCinema.movie.entity.movieDetailInfo.Actor;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMediaInfo.StillCut;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.weaver.ast.Instanceof;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -28,12 +26,12 @@ public class MovieDetailsMapper {
 
         }
 
-        ArrayList<StillCutDto> stillCutDtos=new ArrayList<>();
+        ArrayList<StillCutVo> stillCutVos =new ArrayList<>();
         for (int i = 0; i < movie.getStillCuts().size(); i++) {
-            StillCutDto stillCutDto = new StillCutDto();
+            StillCutVo stillCutVo = new StillCutVo();
             StillCut stillCut = movie.getStillCuts().get(i);
-            stillCutDto.setStillCut_url(stillCut.getStillCut_url());
-            stillCutDtos.add(stillCutDto);
+            stillCutVo.setStillCut_url(stillCut.getStillCut_url());
+            stillCutVos.add(stillCutVo);
         }
         /*
         무비 -> 얘가 어떤 박스 오피스에 있는가?
@@ -77,7 +75,7 @@ public class MovieDetailsMapper {
         detailsBasicInfo.genre = genreList;
         detailsBasicInfo.plot = movie.getPlot().getPlotText();
         detailsBasicInfo.poster = movie.getPoster().getPoster_image_url();
-        detailsBasicInfo.stillCut = stillCutDtos;
+        detailsBasicInfo.stillCut = stillCutVos;
         detailsBasicInfo.backDrop = movie.getBackDrop().getBackDrop_image_url();
         return detailsBasicInfo;
     }
@@ -106,15 +104,15 @@ public class MovieDetailsMapper {
 
     public DetailsMediaInfo detailsMediaInfoResponseDto(Movie movie) {
         DetailsMediaInfo detailsMediaInfo = new DetailsMediaInfo();
-        ArrayList<StillCutDto> stillCutDtos=new ArrayList<>();
+        ArrayList<StillCutVo> stillCutVos =new ArrayList<>();
 
         for (int i = 0; i < movie.getStillCuts().size(); i++) {
-            StillCutDto stillCutDto = new StillCutDto();
+            StillCutVo stillCutVo = new StillCutVo();
             StillCut stillCut = movie.getStillCuts().get(i);
-            stillCutDto.setStillCut_url(stillCut.getStillCut_url());
-            stillCutDtos.add(stillCutDto);
+            stillCutVo.setStillCut_url(stillCut.getStillCut_url());
+            stillCutVos.add(stillCutVo);
         }
-        detailsMediaInfo.stillCuts = stillCutDtos;
+        detailsMediaInfo.stillCuts = stillCutVos;
         detailsMediaInfo.youtubeReviews = movie.getYoutubeReviews().get(0).getYoutubeReview_url();
         detailsMediaInfo.trailers = movie.getTrailers().get(0).getTrailer_url();
 

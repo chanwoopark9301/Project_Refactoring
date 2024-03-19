@@ -1,11 +1,7 @@
 spring:
-  application:
-    name: sundayCinema
-  main:
-    banner-mode: "off" # 배너 출력 끄기 (선택 사항)
-  logging:
-    level:
-      com.sundayCinema.sundayCinema.movie.api.TMDB: DEBUG
+  profiles:
+    activate:
+      on-profile: mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
@@ -14,7 +10,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: off
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
   security:
     oauth2:
       client:

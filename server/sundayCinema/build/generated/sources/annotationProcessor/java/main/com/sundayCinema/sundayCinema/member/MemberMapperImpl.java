@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-19T23:42:44+0900",
-    comments = "version: 1.4.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 17.0.9 (JetBrains s.r.o.)"
+    date = "2024-03-19T14:59:09+0900",
+    comments = "version: 1.4.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 11.0.22 (IBM Corporation)"
 )
 @Component
 public class MemberMapperImpl implements MemberMapper {
@@ -24,7 +24,7 @@ public class MemberMapperImpl implements MemberMapper {
 
         Member member = new Member();
 
-        member.setUserName( memberPostDto.getUserName() );
+        member.setUsername( memberPostDto.getUsername() );
         member.setEmail( memberPostDto.getEmail() );
         member.setPassword( memberPostDto.getPassword() );
 
@@ -40,7 +40,7 @@ public class MemberMapperImpl implements MemberMapper {
         Member member = new Member();
 
         member.setMemberId( memberPatchDto.getMemberId() );
-        member.setUserName( memberPatchDto.getUserName() );
+        member.setUsername( memberPatchDto.getUsername() );
         member.setPassword( memberPatchDto.getPassword() );
 
         return member;
@@ -54,15 +54,15 @@ public class MemberMapperImpl implements MemberMapper {
 
         Long memberId = null;
         String email = null;
-        String userName = null;
+        String username = null;
         String password = null;
 
         memberId = member.getMemberId();
         email = member.getEmail();
-        userName = member.getUserName();
+        username = member.getUsername();
         password = member.getPassword();
 
-        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, email, userName, password );
+        MemberResponseDto memberResponseDto = new MemberResponseDto( memberId, email, username, password );
 
         return memberResponseDto;
     }

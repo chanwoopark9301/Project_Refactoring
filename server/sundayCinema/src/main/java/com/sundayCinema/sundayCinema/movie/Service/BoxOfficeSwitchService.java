@@ -1,16 +1,14 @@
 package com.sundayCinema.sundayCinema.movie.Service;
 
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.BoxOfficeMovieDto;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.ForeignBoxOffice;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.GenreBoxOffice;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.KoreaBoxOffice;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.*;
 import com.sundayCinema.sundayCinema.movie.mapper.BoxOfficeMovieMapper;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.BoxOfficeMovieRepository;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.ForeignBoxOfficeRepository;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.GenreBoxOfficeRepository;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.KoreaBoxOfficeRepository;
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
@@ -18,40 +16,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@Slf4j
+@RequiredArgsConstructor
 public class BoxOfficeSwitchService {
-    private final BoxOfficeMovieRepository boxOfficeMovieRepository;
-    private final KoreaBoxOfficeRepository koreaBoxOfficeRepository;
-    private final ForeignBoxOfficeRepository foreignBoxOfficeRepository;
-    private final GenreBoxOfficeRepository genreBoxOfficeRepository;
+    @Autowired private final BoxOfficeMovieRepository boxOfficeMovieRepository;
+    @Autowired private final KoreaBoxOfficeRepository koreaBoxOfficeRepository;
+    @Autowired private final ForeignBoxOfficeRepository foreignBoxOfficeRepository;
+    @Autowired private final GenreBoxOfficeRepository genreBoxOfficeRepository;
+    @Autowired private final BoxOfficeMovieMapper boxOfficeMovieMapper;
 
-    private final BoxOfficeMovieMapper boxOfficeMovieMapper;
-
-    public BoxOfficeSwitchService(BoxOfficeMovieRepository boxOfficeMovieRepository, KoreaBoxOfficeRepository koreaBoxOfficeRepository, ForeignBoxOfficeRepository foreignBoxOfficeRepository,
-                                  GenreBoxOfficeRepository genreBoxOfficeRepository, BoxOfficeMovieMapper boxOfficeMovieMapper) {
-        this.boxOfficeMovieRepository = boxOfficeMovieRepository;
-        this.koreaBoxOfficeRepository = koreaBoxOfficeRepository;
-        this.foreignBoxOfficeRepository = foreignBoxOfficeRepository;
-        this.genreBoxOfficeRepository = genreBoxOfficeRepository;
-        this.boxOfficeMovieMapper = boxOfficeMovieMapper;
-    }
 
     //박스 오피스 타입을 변환해서 저장
-    public void saveBoxOfficeByNationCd(String repNationCd, BoxOfficeMovie boxOfficeMovie){
-        if(repNationCd.equals("")){
+    public void saveBoxOffice(MovieCategoryCode movieCategoryCode, BoxOfficeMovie boxOfficeMovie){
+        if(movieCategoryCode.equals(MovieCategoryCode.COMPREHENSIVE_BOX_OFFICE)){
             BoxOfficeMovie newBoxOfficeMovie = new BoxOfficeMovie(boxOfficeMovie);
             boxOfficeMovieRepository.save(newBoxOfficeMovie);
         }
-        else if(repNationCd.equals("K")){
+        else if(movieCategoryCode.equals(MovieCategoryCode.KOREA_BOX_OFFICE)){
             koreaBoxOfficeRepository.save(createKoreaBoxOffice(boxOfficeMovie));
         }
-        else if(repNationCd.equals("F")){
+        else if(movieCategoryCode.equals(MovieCategoryCode.FOREIGN_BOX_OFFICE)){
             foreignBoxOfficeRepository.save(createForeignBoxOffice(boxOfficeMovie));
         }
-        else if(repNationCd.equals("G")){
-            genreBoxOfficeRepository.save(createGenreBoxOffice(boxOfficeMovie));
-        }
-
     }
     @Cacheable(value = "Top10ReadMapper.findTop10")
     public List<BoxOfficeMovieDto> loadBoxOfficeByBoxNm(String boxOfficeCd) {

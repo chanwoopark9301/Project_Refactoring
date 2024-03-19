@@ -2,7 +2,8 @@ package com.sundayCinema.sundayCinema.comment;
 
 import com.sundayCinema.sundayCinema.advice.audit.Auditable;
 import com.sundayCinema.sundayCinema.member.Member;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.DetailMovie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,11 +26,11 @@ public class Comment extends Auditable {
     @Column(nullable = false)
     private double score; // 평점 (1부터 5까지)
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie; // 댓글이 달린 영화
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id", nullable = false)
     private Member member; // 댓글을 작성한 사용자
 

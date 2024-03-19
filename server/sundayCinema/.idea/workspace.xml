@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356a59ac-943c-4e71-ada2-883c1738e744" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/advice/cache/EhcacheConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/advice/cache/EhcacheController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/DetailMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/MovieCategoryCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/cache/ehcacheTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/movie/boxOffice/BoxOfficeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/movie/movieTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -22,40 +21,228 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/SundayCinemaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/SundayCinemaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/Utils/UriCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/Utils/UriCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/audit/Auditable.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/audit/Auditable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/cache/EhcacheConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/cache/EhcacheConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/cache/EhcacheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/advice/cache/EhcacheController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/Comment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPatchDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPatchDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentPostDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto$CommentResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/DuplicateCommentException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/DuplicateCommentException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/InvalidInputException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/comment/InvalidInputException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/exception/BusinessLogicException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/exception/BusinessLogicException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/exception/ExceptionCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/exception/ExceptionCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/OAuth2/handler/OAuth2MemberSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/OAuth2/handler/OAuth2MemberSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration$CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration$CorsFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration$CustomFilterConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration$CustomFilterConfigurer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/dto/LoginDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/filter/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/filter/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/filter/JwtVerificationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/filter/JwtVerificationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAccessDeniedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAccessDeniedHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationEntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationFailureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationFailureHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/handler/MemberAuthenticationSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/jwt/JwtTokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/jwt/JwtTokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/CustomUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/CustomUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService$MemberDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService$MemberDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/CustomAuthorityUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/CustomAuthorityUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/ErrorResponder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/ErrorResponder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/UserAuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/logIn/utils/UserAuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/Member.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberPatchDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberPatchDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberPostDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberPostDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MemberResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MultiResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$MultiResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$SingleResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto$SingleResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/MemberService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/PageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/PageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/PaginatedResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/member/PaginatedResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Controller/MovieController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/Service/MovieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/KobisRepoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/KobisRepoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/MediaRepoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/MediaRepoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$DataItem$ResultItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$DataItem$ResultItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$DataItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$DataItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Plot$PlotInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Plot$PlotInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Plot.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Plot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Vod$VodInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Vod$VodInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Vod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse$Vod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService$UrlParameterBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService$UrlParameterBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse$BoxofficeData.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse$BoxofficeData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/KobisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/KobisService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse$MovieItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse$MovieItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/MovieDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/MovieDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/MovieSearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/MovieSearchResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/SearchResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/SearchResults.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/TmdbService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/TmdbService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/VideoInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/VideoInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/VideoResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/TMDB/VideoResults.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/youtubeAPI/YoutubeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/api/youtubeAPI/YoutubeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/ActorDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/ActorDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailPageDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailPageDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsBasicInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsBasicInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMainInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMainInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMediaInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMediaInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/StillCutDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/BoxOfficeMovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/BoxOfficeMovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreMovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreMovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/MainPageDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/MainPageDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/TrailerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/TrailerDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/boxOffice/BoxOfficeMovie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/boxOffice/ForeignBoxOffice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/boxOffice/GenreBoxOffice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/boxOffice/KoreaBoxOffice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Director.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Genre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Movie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/MovieAudit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Nation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/BackDrop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Plot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Poster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/StillCut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Trailer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/entity/movieMedia/YoutubeReview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/BoxOfficeMovieMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/BoxOfficeMovieMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/GenreMovieMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/GenreMovieMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/BoxOfficeMovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/BoxOfficeMovieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/ForeignBoxOfficeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/ForeignBoxOfficeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/GenreBoxOfficeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/GenreBoxOfficeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/KoreaBoxOfficeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/KoreaBoxOfficeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/ActorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/ActorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/DirectorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/DirectorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/GenreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/GenreRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieAuditRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieAuditRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/NationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/NationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/BackDropRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/BackDropRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PlotRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PlotRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PosterRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PosterRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/StillCutRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/StillCutRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/TrailerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/TrailerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/YoutubeReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/YoutubeReviewRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse$ConstraintViolationError.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse$ConstraintViolationError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse$FieldError.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse$FieldError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/sundayCinema/sundayCinema/response/ErrorResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/SundayCinemaApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/SundayCinemaApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/comment/CommentControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/comment/CommentControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/comment/CommentRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/comment/CommentRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/member/MemberControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/sundayCinema/sundayCinema/member/MemberControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/comment/CommentMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/sundayCinema/sundayCinema/member/MemberMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.sundayCinema.sundayCinema.comment.CommentRepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/sundayCinema-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/sundayCinema-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.sundayCinema.sundayCinema.comment.CommentControllerTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.sundayCinema.sundayCinema.comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.sundayCinema.sundayCinema.comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application-h2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-h2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.sundayCinema.sundayCinema.comment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-h2.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-mysql.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.sundayCinema.sundayCinema.comment.CommentRepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.sundayCinema.sundayCinema.comment.CommentControllerTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentController.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CommentService.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CommentRepositoryTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CommentControllerTest.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CommentRepositoryTest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/MemberControllerTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/Comment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/comment/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/OAuth2/handler/OAuth2MemberSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/OAuth2/handler/OAuth2MemberSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/logIn/jwt/userDetails/MemberDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/member/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/BoxOfficeSwitchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-h2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-h2.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/Service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/KobisRepoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/KobisRepoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/MediaRepoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/ApiRepoService/MediaRepoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KMDB/KdmbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/BoxofficeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/KobisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/KobisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/KOBIS/MovieResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/TMDB/TmdbService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/TMDB/TmdbService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/youtubeAPI/YoutubeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/api/youtubeAPI/YoutubeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsBasicInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsBasicInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMediaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/DetailsMediaInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/StillCutDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/detaiPagelDto/StillCutVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/BoxOfficeMovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/BoxOfficeMovieDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreMovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/dto/mainPageDto/GenreMovieDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/boxOffice/BoxOfficeMovie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/BoxOfficeMovie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/boxOffice/ForeignBoxOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/ForeignBoxOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/boxOffice/GenreBoxOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/GenreBoxOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/boxOffice/KoreaBoxOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/KoreaBoxOffice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieDetailInfo/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieDetailInfo/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieDetailInfo/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMainInfo/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/MovieAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieDetailInfo/MovieAudit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieInfo/Nation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieDetailInfo/Nation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/BackDrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/BackDrop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Plot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/Plot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Poster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/Poster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/StillCut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/StillCut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/Trailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/Trailer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMedia/YoutubeReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/entity/movieMediaInfo/YoutubeReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/BoxOfficeMovieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/BoxOfficeMovieMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/GenreMovieMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/GenreMovieMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/mapper/MovieDetailsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/BoxOfficeMovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/BoxOfficeMovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/ForeignBoxOfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/ForeignBoxOfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/GenreBoxOfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/GenreBoxOfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/KoreaBoxOfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/boxOfficeRepo/KoreaBoxOfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/ActorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/ActorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/DirectorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/DirectorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/GenreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/GenreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieAuditRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieAuditRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/MovieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/NationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieInfoRepo/NationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/BackDropRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/BackDropRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PlotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PlotRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PosterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/PosterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/StillCutRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/StillCutRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/TrailerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/TrailerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/YoutubeReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sundayCinema/sundayCinema/movie/repository/movieMediaRepo/YoutubeReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-h2.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-server.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-mysql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ehcache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/comment/CommentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/comment/CommentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/comment/CommentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sundayCinema/sundayCinema/comment/CommentRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +272,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -120,7 +309,10 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/study/DB/JPAPractice/JPAPractice&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/myProject/refectoring/seb45_main_001/seb45_main_001/server/sundayCinema&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -132,20 +324,16 @@
       <recent name="C:\myProject\refectoring\main_project\server\sundayCinema" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.sundayCinema.sundayCinema.movie.Service" />
+      <recent name="com.sundayCinema.sundayCinema.movie.api.ApiRepoService" />
       <recent name="com.sundayCinema.sundayCinema.comment" />
       <recent name="com.sundayCinema.sundayCinema.member" />
     </key>
   </component>
   <component name="RunManager" selected="애플리케이션.SundayCinemaApplication">
     <configuration name="SundayCinemaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="11" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.sundayCinema.sundayCinema.SundayCinemaApplication" />
       <module name="sundayCinema.main" />
-      <selectedOptions>
-        <option name="environmentVariables" visible="false" />
-      </selectedOptions>
-      <option name="VM_PARAMETERS" value="-javaagent:$PROJECT_DIR$/../../../../../scouter/agent.java/scouter.agent.jar -Dscouter.config/$PROJECT_DIR$/../../../../../scouter/server/conf/scouter.conf -Dobj_name=demoTomcat --add-opens java.base/java.lang=ALL-UNNAMED -Dspring.profiles.active=mysql" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sundayCinema.sundayCinema.*" />
@@ -156,8 +344,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="movieTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="-Dspring.profiles.active" value="mysql" />
+          </map>
+        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
@@ -169,7 +362,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.sundayCinema.sundayCinema.comment.CommentControllerTest&quot;" />
+            <option value="&quot;com.sundayCinema.sundayCinema.movie.movieTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +373,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CommentControllerTest.postCommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="movieTest.MovieTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +386,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.sundayCinema.sundayCinema.comment.CommentControllerTest.postCommentTest&quot;" />
+            <option value="&quot;com.sundayCinema.sundayCinema.movie.movieTest.MovieTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +397,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CommentRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="movieTest.findMovieTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +410,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.sundayCinema.sundayCinema.comment.CommentRepositoryTest&quot;" />
+            <option value="&quot;com.sundayCinema.sundayCinema.movie.movieTest.findMovieTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,44 +421,42 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CommentRepositoryTest.saveCommentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="sundayCinema [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.sundayCinema.sundayCinema.comment.CommentRepositoryTest.saveCommentTest&quot;" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.CommentControllerTest" />
-      <item itemvalue="Gradle.CommentRepositoryTest" />
-      <item itemvalue="Gradle.CommentRepositoryTest.saveCommentTest" />
-      <item itemvalue="Gradle.CommentControllerTest.postCommentTest" />
+      <item itemvalue="Gradle.movieTest.MovieTest" />
+      <item itemvalue="Gradle.sundayCinema [build]" />
+      <item itemvalue="Gradle.movieTest.findMovieTest" />
+      <item itemvalue="Gradle.movieTest" />
       <item itemvalue="애플리케이션.SundayCinemaApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CommentControllerTest" />
-        <item itemvalue="Gradle.CommentRepositoryTest" />
         <item itemvalue="애플리케이션.SundayCinemaApplication" />
-        <item itemvalue="Gradle.CommentRepositoryTest.saveCommentTest" />
-        <item itemvalue="Gradle.CommentControllerTest.postCommentTest" />
+        <item itemvalue="Gradle.movieTest.MovieTest" />
+        <item itemvalue="Gradle.movieTest.findMovieTest" />
+        <item itemvalue="Gradle.sundayCinema [build]" />
+        <item itemvalue="Gradle.movieTest" />
       </list>
     </recent_temporary>
   </component>

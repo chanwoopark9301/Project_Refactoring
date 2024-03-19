@@ -19,7 +19,7 @@ public class DetailsBasicInfo{
     public String audiAcc; // "누적 관객수"
 
     public String poster;
-    public List<StillCutDto> stillCut;
+    public List<StillCutVo> stillCut;
     public String plot;
     public List<String> genre; // 리스트 형태로 수정
     public List<String> nation; // 리스트 형태로 수정

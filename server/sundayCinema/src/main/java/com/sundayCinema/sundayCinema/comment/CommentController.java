@@ -1,16 +1,10 @@
 package com.sundayCinema.sundayCinema.comment;
 
-import com.sundayCinema.sundayCinema.member.Member;
-import com.sundayCinema.sundayCinema.member.MemberRepository;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
-import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
@@ -61,9 +55,7 @@ public class CommentController {
         return ResponseEntity.ok(comment);
     }
     @GetMapping("/movie/{movieId}")
-    public ResponseEntity<?> getAllCommentsForMovie(
-            @PathVariable("movieId") Long movieId
-            ) {
+    public ResponseEntity<?> getAllCommentsForMovie(@PathVariable("movieId") Long movieId) {
 
         // movieId와 memberId가 null이면 BadRequest로 처리
         if (movieId == null) {

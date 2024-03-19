@@ -7,11 +7,12 @@ import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.*;
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.BoxOfficeMovieDto;
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.GenreMovieDto;
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.MainPageDto;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
 import com.sundayCinema.sundayCinema.movie.mapper.MovieDetailsMapper;
 import com.sundayCinema.sundayCinema.movie.repository.boxOfficeRepo.BoxOfficeMovieRepository;
 import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,27 +27,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping
+@RequiredArgsConstructor
 public class MovieController {
-    private final MovieService movieService;
-    private final MovieRepository movieRepository;
-    private final MovieDetailsMapper movieDetailsMapper;
-    private final BoxOfficeSwitchService boxOfficeSwitchService;
-    private final MediaRepoService mediaRepoService;
+    @Autowired private final MovieService movieService;
+    @Autowired private final MovieRepository movieRepository;
+    @Autowired private final MovieDetailsMapper movieDetailsMapper;
+    @Autowired private final BoxOfficeSwitchService boxOfficeSwitchService;
+    @Autowired private final MediaRepoService mediaRepoService;
 
-    public MovieController(MovieService movieService, BoxOfficeMovieRepository boxOfficeMovieRepository,
-                           MovieRepository movieRepository, MovieDetailsMapper movieDetailsMapper,
-                           BoxOfficeSwitchService boxOfficeSwitchService, MediaRepoService mediaRepoService) {
-        this.movieService = movieService;
-        this.movieRepository = movieRepository;
-        this.movieDetailsMapper = movieDetailsMapper;
-        this.boxOfficeSwitchService = boxOfficeSwitchService;
-        this.mediaRepoService = mediaRepoService;
-    }
 
-    @GetMapping("/saveGenre/{date}")
-    public void saveGenreAll(@PathVariable String date) throws Exception {
-        movieService.saveGenreAll(date);
-    }
     @GetMapping("/save/top10")
     public void saveTop10() throws Exception {
         movieService.saveTop10All();
@@ -82,9 +71,9 @@ public class MovieController {
         return new ResponseEntity<>(mainPageDto, HttpStatus.OK);
     }
     @GetMapping("/details/{movieId}")
-    public ResponseEntity getMovieDetails(@PathVariable long movieId){
+    public ResponseEntity getMovieDetails(@PathVariable Long movieId){
 
-        Movie findMovie = movieRepository.findByMovieId(movieId);
+        Movie findMovie = movieRepository.findMovieByMovieId(movieId);
 //        String movieCd = findMovie.getMovieCd();
 //        BoxOfficeMovie boxOfficeMovie = boxOfficeMovieRepository.findByMovieCd(movieCd);
         DetailsBasicInfo basicInfo = movieDetailsMapper.detailsBasicResponseDto(findMovie);
@@ -93,9 +82,9 @@ public class MovieController {
         return new ResponseEntity(detailPageDto,HttpStatus.OK);
     }
     @GetMapping("/details/{movieId}/mainInfo")
-    public ResponseEntity getMovieDetailsMainInfo(@PathVariable long movieId){
+    public ResponseEntity getMovieDetailsMainInfo(@PathVariable Long movieId){
 
-        Movie findMovie = movieRepository.findByMovieId(movieId);
+        Movie findMovie = movieRepository.findMovieByMovieId(movieId);
         DetailsMainInfo detailsMainInfo= movieDetailsMapper.detailsMainInfoResponseDto(findMovie);
         DetailPageDto<DetailsMainInfo> detailPageDto = new DetailPageDto<>();
         detailPageDto.setDetailsList(detailsMainInfo);
@@ -103,9 +92,9 @@ public class MovieController {
     }
 
     @GetMapping("/details/{movieId}/mediaInfo")
-    public ResponseEntity getMovieDetailsMediaInfo(@PathVariable long movieId){
+    public ResponseEntity getMovieDetailsMediaInfo(@PathVariable Long movieId){
 
-        Movie findMovie = movieRepository.findByMovieId(movieId);
+        Movie findMovie = movieRepository.findMovieByMovieId(movieId);
         DetailsMediaInfo detailsMediaInfo= movieDetailsMapper.detailsMediaInfoResponseDto(findMovie);
         DetailPageDto<DetailsMediaInfo> detailPageDto = new DetailPageDto<>();
         detailPageDto.setDetailsList(detailsMediaInfo);

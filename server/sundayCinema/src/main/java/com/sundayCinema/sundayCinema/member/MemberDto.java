@@ -12,18 +12,15 @@ import java.util.List;
 
 public class MemberDto {
 
-    public static String A = "A";
     @Getter
     @Setter
-    @NoArgsConstructor
     @AllArgsConstructor
-    @ToString
     public static class MemberPostDto{
         @NotBlank
         @Email
         private String email;
 
-        private String userName;
+        private String username;
 
         private String password;
 
@@ -34,7 +31,7 @@ public class MemberDto {
     @Setter
     public static class MemberPatchDto{
         private Long memberId;
-        private String userName;
+        private String username;
         private String password;
     }
 
@@ -46,7 +43,7 @@ public class MemberDto {
 
         private String email;
 
-        private String userName;
+        private String username;
 
         private String password;
 

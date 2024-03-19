@@ -10,31 +10,14 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.Principal;
-import java.util.Collection;
-import java.util.Enumeration;
-import java.util.Locale;
-import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -69,6 +52,21 @@ class CommentControllerTest {
                 .content(content));
 
         actions.andExpect(status().isOk());
+
+    }
+    @Test
+    public void getAllCommentsForMovieTest() throws Exception {
+
+        String movieId="2";
+        String url = "/api/comments/movie/"+movieId;
+
+        ResultActions actions = mockMvc.perform(MockMvcRequestBuilders.get(url));
+        MvcResult result = actions.andReturn();
+        String contentAsString = result.getResponse().getContentAsString();
+        System.out.println("/////////////////////////////////////////////"+contentAsString);
+
+        actions.andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.content().json("[]"));
 
     }
 }

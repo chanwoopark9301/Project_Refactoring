@@ -1,14 +1,14 @@
 package com.sundayCinema.sundayCinema.movie.mapper;
 
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.BoxOfficeMovieDto;
-import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.GenreDto;
-import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutDto;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.ForeignBoxOffice;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.KoreaBoxOffice;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Genre;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.StillCut;
+import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.GenreVo;
+import com.sundayCinema.sundayCinema.movie.dto.detaiPagelDto.StillCutVo;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.BoxOfficeMovie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.ForeignBoxOffice;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.KoreaBoxOffice;
+import com.sundayCinema.sundayCinema.movie.entity.movieDetailInfo.Genre;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMediaInfo.StillCut;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -39,8 +39,8 @@ public class BoxOfficeMovieMapper {
 
     private BoxOfficeMovieDto mapToDto(Movie movie, String rank, String movieNm) {
         // 공통 매핑 로직을 수행
-        ArrayList<GenreDto> genreDtos = mapGenres(movie.getGenres());
-        ArrayList<StillCutDto> stillCutDtos = mapStillCuts(movie.getStillCuts());
+        ArrayList<GenreVo> genreVos = mapGenres(movie.getGenres());
+        ArrayList<StillCutVo> stillCutVos = mapStillCuts(movie.getStillCuts());
 
         BoxOfficeMovieDto boxOfficeMovieDto = new BoxOfficeMovieDto();
         boxOfficeMovieDto.movieId = movie.getMovieId();
@@ -48,31 +48,31 @@ public class BoxOfficeMovieMapper {
         boxOfficeMovieDto.posterUrl = movie.getPoster().getPoster_image_url();
         boxOfficeMovieDto.rank = rank;
         boxOfficeMovieDto.movieNm = movieNm;
-        boxOfficeMovieDto.genre = genreDtos;
-        boxOfficeMovieDto.stillCut = stillCutDtos;
+        boxOfficeMovieDto.genre = genreVos;
+        boxOfficeMovieDto.stillCut = stillCutVos;
         boxOfficeMovieDto.backDrop = movie.getBackDrop().getBackDrop_image_url();
         boxOfficeMovieDto.plot = movie.getPlot().getPlotText();
 
         return boxOfficeMovieDto;
     }
 
-    private ArrayList<GenreDto> mapGenres(List<Genre> genres) {
-        ArrayList<GenreDto> genreDtos = new ArrayList<>();
+    private ArrayList<GenreVo> mapGenres(List<Genre> genres) {
+        ArrayList<GenreVo> genreVos = new ArrayList<>();
         for (Genre genre : genres) {
-            GenreDto genreDto = new GenreDto();
-            genreDto.setGenreNm(genre.getGenreNm());
-            genreDtos.add(genreDto);
+            GenreVo genreVo = new GenreVo();
+            genreVo.setGenreNm(genre.getGenreNm());
+            genreVos.add(genreVo);
         }
-        return genreDtos;
+        return genreVos;
     }
 
-    private ArrayList<StillCutDto> mapStillCuts(List<StillCut> stillCuts) {
-        ArrayList<StillCutDto> stillCutDtos = new ArrayList<>();
+    private ArrayList<StillCutVo> mapStillCuts(List<StillCut> stillCuts) {
+        ArrayList<StillCutVo> stillCutVos = new ArrayList<>();
         for (StillCut stillCut : stillCuts) {
-            StillCutDto stillCutDto = new StillCutDto();
-            stillCutDto.setStillCut_url(stillCut.getStillCut_url());
-            stillCutDtos.add(stillCutDto);
+            StillCutVo stillCutVo = new StillCutVo();
+            stillCutVo.setStillCut_url(stillCut.getStillCut_url());
+            stillCutVos.add(stillCutVo);
         }
-        return stillCutDtos;
+        return stillCutVos;
     }
 }

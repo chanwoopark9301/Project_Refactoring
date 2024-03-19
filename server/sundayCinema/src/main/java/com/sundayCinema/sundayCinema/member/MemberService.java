@@ -63,7 +63,7 @@ public class MemberService {
         // DB에 저장된 정보가 없다면
         List<String> roles = authorityUtils.createRoles(member.getEmail());
         Member beSavedMember = new Member(
-                member.getUserName(),          // DisplayName null (이후 추가로 변경하는 창을 redirection 할 수 있음)
+                member.getUsername(),          // DisplayName null (이후 추가로 변경하는 창을 redirection 할 수 있음)
                 member.getEmail(), // 구글 이메일을 DB에 등록
                 "",                //암호화된 비밀번호 빈 문자열
                 roles,               //권한 목록
@@ -80,8 +80,8 @@ public class MemberService {
 
         Optional.ofNullable(member.getPassword())
                 .ifPresent(password -> findMember.setPassword(password));
-        Optional.ofNullable(member.getUserName())
-                .ifPresent(userName -> findMember.setUserName(userName));
+        Optional.ofNullable(member.getUsername())
+                .ifPresent(userName -> findMember.setUsername(userName));
         return memberRepository.save(findMember);
     }
 

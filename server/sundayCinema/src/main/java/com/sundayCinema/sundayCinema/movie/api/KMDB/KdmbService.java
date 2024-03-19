@@ -3,16 +3,7 @@ package com.sundayCinema.sundayCinema.movie.api.KMDB;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sundayCinema.sundayCinema.movie.api.youtubeAPI.YoutubeService;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.Plot;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.Poster;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.StillCut;
-import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
-import com.sundayCinema.sundayCinema.movie.repository.movieMediaRepo.PlotRepository;
-import com.sundayCinema.sundayCinema.movie.repository.movieMediaRepo.PosterRepository;
-import com.sundayCinema.sundayCinema.movie.repository.movieMediaRepo.StillCutRepository;
-import com.sundayCinema.sundayCinema.movie.repository.movieMediaRepo.TrailerRepository;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.BoxOfficeMovie;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

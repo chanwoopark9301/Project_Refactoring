@@ -3,12 +3,15 @@ package com.sundayCinema.sundayCinema.movie.Service;
 import com.sundayCinema.sundayCinema.movie.api.ApiRepoService.KobisRepoService;
 import com.sundayCinema.sundayCinema.movie.api.ApiRepoService.MediaRepoService;
 import com.sundayCinema.sundayCinema.movie.dto.mainPageDto.GenreMovieDto;
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieInfo.Movie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.BoxOfficeMovie;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.MovieCategoryCode;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.Movie;
 import com.sundayCinema.sundayCinema.movie.mapper.GenreMovieMapper;
 import com.sundayCinema.sundayCinema.movie.repository.movieInfoRepo.MovieRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -17,21 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Slf4j
+@RequiredArgsConstructor
 public class MovieService {
 
-    private final MovieRepository movieRepository;
-    private final GenreMovieMapper genreMovieMapper;
-    private final KobisRepoService kobisRepoService;
-    private final MediaRepoService mediaRepoService;
-
-    public MovieService(MovieRepository movieRepository, GenreMovieMapper genreMovieMapper,
-                        KobisRepoService kobisRepoService, MediaRepoService mediaRepoService) {
-        this.movieRepository = movieRepository;
-        this.genreMovieMapper = genreMovieMapper;
-        this.kobisRepoService = kobisRepoService;
-        this.mediaRepoService = mediaRepoService;
-    }
+    @Autowired private final MovieRepository movieRepository;
+    @Autowired private final GenreMovieMapper genreMovieMapper;
+    @Autowired private final KobisRepoService kobisRepoService;
+    @Autowired private final MediaRepoService mediaRepoService;
 
 //    @Scheduled(cron = "0 0 0 * * ?") -> 배치 엔진에 대한 관리가 필요(시스템 설계 필요) -> 스프링 배치
     // 생각없이 예외를 던지는 것은 해악 -> 비지니스 로직에 맞는 예외를 던저야지, 신뢰도가 너무 낮다. 예외가 터지면 난 몰라라는 코드
@@ -45,20 +40,17 @@ public class MovieService {
         saveTop10All();
     }
 
-    public void saveGenreAll(String date) throws Exception {
-        List<BoxOfficeMovie> genreList= kobisRepoService.saveGenreBox(date);
-        saveMedia(genreList);
-    }
+
     public void saveTop10All() throws Exception {
-        List<BoxOfficeMovie> top10Box= kobisRepoService.searchAndSaveBoxOfficeByNationCd("");
+        List<BoxOfficeMovie> top10Box= kobisRepoService.searchAndSaveMovieAndBoxOffice(MovieCategoryCode.COMPREHENSIVE_BOX_OFFICE);
         saveMedia(top10Box);
-        List<BoxOfficeMovie> kBox= kobisRepoService.searchAndSaveBoxOfficeByNationCd("K");
+        List<BoxOfficeMovie> kBox= kobisRepoService.searchAndSaveMovieAndBoxOffice(MovieCategoryCode.KOREA_BOX_OFFICE);
         saveMedia(kBox);
-        List<BoxOfficeMovie> fBox= kobisRepoService.searchAndSaveBoxOfficeByNationCd("F");
+        List<BoxOfficeMovie> fBox= kobisRepoService.searchAndSaveMovieAndBoxOffice(MovieCategoryCode.FOREIGN_BOX_OFFICE);
         saveMedia(fBox);
     }
 
-    // 액션, 코메디, 드라마, 애니메이션, 스릴러, 판타지, 멜로/로맨스, 공포(호러), 어드밴처, 범죄
+    @Cacheable(value = "Top10ReadMapper.findTop10")
     public List<GenreMovieDto>loadGenreMovie(String nation){
         String[] genreArray={"액션", "코메디", "드라마", "애니메이션", "스릴러", "판타지", "멜로/로맨스", "공포(호러)", "어드밴처", "범죄"};
         List<GenreMovieDto>genreMovieDtos=new ArrayList<>();

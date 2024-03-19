@@ -1,15 +1,23 @@
 spring:
-  main:
-    allow-bean-definition-overriding: true
+  profiles:
+    activate:
+      on-profile: h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${RDS_URL}
-    username: ${MYSQL_USERNAME}
-    password: ${MYSQL_PASSWORD}
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/test
+    username: sa
+    password:
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: off
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
   security:
     oauth2:
       client:
@@ -20,6 +28,7 @@ spring:
   youtubeApiKey: ${YOUTUBE_API_KEY}
   KdmbApiKey: ${KDMB_API_KEY}
   KobisApiKEY: ${KOBIS_API_KEY}
+#  tmdbKey : ${TMDB_API_KEY}
 jwt:
   key:
     secret: ${JWT_SECRET_KEY}

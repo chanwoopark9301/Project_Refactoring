@@ -1,17 +1,8 @@
 package com.sundayCinema.sundayCinema.movie.api.TMDB;
 
-import com.sundayCinema.sundayCinema.movie.Service.MovieService;
-
-import com.sundayCinema.sundayCinema.movie.entity.boxOffice.BoxOfficeMovie;
-import com.sundayCinema.sundayCinema.movie.entity.movieMedia.Trailer;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.sundayCinema.sundayCinema.movie.entity.movieMainInfo.BoxOfficeMovie;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import java.io.IOException;
 
 @Service
 public class TmdbService {
