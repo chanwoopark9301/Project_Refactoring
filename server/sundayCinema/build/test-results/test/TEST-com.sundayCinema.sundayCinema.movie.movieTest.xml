@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sundayCinema.sundayCinema.movie.movieTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-19T05:57:08" hostname="PARKCHANWOO" time="0.185">
+  <properties/>
+  <testcase name="MovieTest()" classname="com.sundayCinema.sundayCinema.movie.movieTest" time="0.185"/>
+  <system-out><![CDATA[14:57:02.710 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+14:57:02.721 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+14:57:02.746 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.sundayCinema.sundayCinema.movie.movieTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:57:02.756 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.sundayCinema.sundayCinema.movie.movieTest], using SpringBootContextLoader
+14:57:02.760 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.sundayCinema.sundayCinema.movie.movieTest]: class path resource [com/sundayCinema/sundayCinema/movie/movieTest-context.xml] does not exist
+14:57:02.761 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.sundayCinema.sundayCinema.movie.movieTest]: class path resource [com/sundayCinema/sundayCinema/movie/movieTestContext.groovy] does not exist
+14:57:02.761 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.sundayCinema.sundayCinema.movie.movieTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:57:02.762 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sundayCinema.sundayCinema.movie.movieTest]: movieTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:57:02.796 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.sundayCinema.sundayCinema.movie.movieTest]
+14:57:02.846 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\dev\myProject\refectoring\main_project\server\sundayCinema\build\classes\java\main\com\sundayCinema\sundayCinema\SundayCinemaApplication.class]
+14:57:02.847 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sundayCinema.sundayCinema.SundayCinemaApplication for test class com.sundayCinema.sundayCinema.movie.movieTest
+14:57:02.921 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.sundayCinema.sundayCinema.movie.movieTest]: using defaults.
+14:57:02.922 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:57:02.940 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@529ea258, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@c43a89cd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1f926cee, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@320c779, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@914bf63c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@9e152ec6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d8b7ab23, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@727b0ffc, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5a7e200b, org.springframework.test.context.event.EventPublishingTestExecutionListener@2c1bf24c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@dc3013c6, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4b1ba80d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5b8796b5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2ca8447e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5b0b13f9, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@ed96abe7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8eba5f97]
+14:57:02.943 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@44648ce5 testClass = movieTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@323e04bd testClass = movieTest, locations = '{}', classes = '{class com.sundayCinema.sundayCinema.SundayCinemaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7c97b931, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@654848e8, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6e90ae44, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@33922190, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@242bc837, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@714cdff8], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2024-03-19 14:57:03.257  INFO 9380 --- [    Test worker] c.s.sundayCinema.movie.movieTest         : Starting movieTest using Java 11.0.22 on PARKCHANWOO with PID 9380 (started by cksdn in C:\dev\myProject\refectoring\main_project\server\sundayCinema)
+2024-03-19 14:57:03.258  INFO 9380 --- [    Test worker] c.s.sundayCinema.movie.movieTest         : No active profile set, falling back to 1 default profile: "default"
+2024-03-19 14:57:04.058  INFO 9380 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-19 14:57:04.158  INFO 9380 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 18 JPA repository interfaces.
+2024-03-19 14:57:04.759  INFO 9380 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-19 14:57:04.807  INFO 9380 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-03-19 14:57:04.952  INFO 9380 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-19 14:57:05.076  INFO 9380 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-19 14:57:05.216  INFO 9380 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-19 14:57:05.249  INFO 9380 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-03-19 14:57:06.356  INFO 9380 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-19 14:57:06.366  INFO 9380 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-19 14:57:06.420  WARN 9380 --- [    Test worker] n.sf.ehcache.config.CacheConfiguration   : Statistics can no longer be enabled via configuration.
+2024-03-19 14:57:06.421  WARN 9380 --- [    Test worker] n.sf.ehcache.config.CacheConfiguration   : Statistics can no longer be enabled via configuration.
+2024-03-19 14:57:06.422  WARN 9380 --- [    Test worker] n.sf.ehcache.config.CacheConfiguration   : Statistics can no longer be enabled via configuration.
+2024-03-19 14:57:06.423  WARN 9380 --- [    Test worker] n.sf.ehcache.config.CacheConfiguration   : Statistics can no longer be enabled via configuration.
+2024-03-19 14:57:07.684  INFO 9380 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@dfa06391, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c03bbc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7eae4e80, org.springframework.security.web.header.HeaderWriterFilter@7ab31b10, org.springframework.security.web.authentication.logout.LogoutFilter@a5967924, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1d631a06, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@aa10fb3c, com.sundayCinema.sundayCinema.logIn.jwt.filter.JwtVerificationFilter@60487fb2, com.sundayCinema.sundayCinema.logIn.jwt.config.SecurityConfiguration$CorsFilter@1cddbc1c, com.sundayCinema.sundayCinema.logIn.jwt.filter.JwtAuthenticationFilter@9fffd6a7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4216315, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2196f7ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9ef2e8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48e98ee1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eb707794, org.springframework.security.web.session.SessionManagementFilter@19d9fbde, org.springframework.security.web.access.ExceptionTranslationFilter@6c243b25, org.springframework.security.web.access.intercept.AuthorizationFilter@50e15e49]
+2024-03-19 14:57:07.874  WARN 9380 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-19 14:57:08.556  INFO 9380 --- [    Test worker] c.s.sundayCinema.movie.movieTest         : Started movieTest in 5.582 seconds (JVM running for 6.59)
+Hibernate: 
+    select
+        movie0_.movie_id as movie_id1_11_,
+        movie0_.created_at as created_2_11_,
+        movie0_.last_modified_at as last_mod3_11_,
+        movie0_.movie_cd as movie_cd4_11_,
+        movie0_.movie_nm as movie_nm5_11_,
+        movie0_.movie_nm_en as movie_nm6_11_,
+        movie0_.movie_nm_og as movie_nm7_11_,
+        movie0_.open_dt as open_dt8_11_,
+        movie0_.prdt_stat_nm as prdt_sta9_11_,
+        movie0_.prdt_year as prdt_ye10_11_,
+        movie0_.show_tm as show_tm11_11_,
+        movie0_.type_nm as type_nm12_11_ 
+    from
+        movie movie0_ 
+    where
+        movie0_.movie_id=?
+Hibernate: 
+    select
+        backdrop0_.back_drop_id as back_dro1_1_0_,
+        backdrop0_.back_drop_image_url as back_dro2_1_0_,
+        backdrop0_.movie_id as movie_id3_1_0_ 
+    from
+        back_drop backdrop0_ 
+    where
+        backdrop0_.movie_id=?
+Hibernate: 
+    select
+        boxofficem0_.box_office_id as box_offi1_2_0_,
+        boxofficem0_.nation_box_office as nation_b2_2_0_,
+        boxofficem0_.overall_box_office as overall_3_2_0_,
+        boxofficem0_.audi_acc as audi_acc4_2_0_,
+        boxofficem0_.movie_id as movie_id9_2_0_,
+        boxofficem0_.movie_cd as movie_cd5_2_0_,
+        boxofficem0_.movie_nm as movie_nm6_2_0_,
+        boxofficem0_.open_dt as open_dt7_2_0_,
+        boxofficem0_.movie_rank as movie_ra8_2_0_ 
+    from
+        box_office_movie boxofficem0_ 
+    where
+        boxofficem0_.movie_id=?
+Hibernate: 
+    select
+        foreignbox0_.foreign_box_office_id as foreign_1_5_0_,
+        foreignbox0_.audi_acc as audi_acc2_5_0_,
+        foreignbox0_.movie_id as movie_id7_5_0_,
+        foreignbox0_.movie_cd as movie_cd3_5_0_,
+        foreignbox0_.movie_nm as movie_nm4_5_0_,
+        foreignbox0_.open_dt as open_dt5_5_0_,
+        foreignbox0_.movie_rank as movie_ra6_5_0_ 
+    from
+        foreign_box_office foreignbox0_ 
+    where
+        foreignbox0_.movie_id=?
+Hibernate: 
+    select
+        genreboxof0_.genre_box_office_id as genre_bo1_7_0_,
+        genreboxof0_.audi_acc as audi_acc2_7_0_,
+        genreboxof0_.movie_id as movie_id7_7_0_,
+        genreboxof0_.movie_cd as movie_cd3_7_0_,
+        genreboxof0_.movie_nm as movie_nm4_7_0_,
+        genreboxof0_.open_dt as open_dt5_7_0_,
+        genreboxof0_.movie_rank as movie_ra6_7_0_ 
+    from
+        genre_box_office genreboxof0_ 
+    where
+        genreboxof0_.movie_id=?
+Hibernate: 
+    select
+        koreaboxof0_.korea_box_office_id as korea_bo1_8_0_,
+        koreaboxof0_.audi_acc as audi_acc2_8_0_,
+        koreaboxof0_.movie_id as movie_id7_8_0_,
+        koreaboxof0_.movie_cd as movie_cd3_8_0_,
+        koreaboxof0_.movie_nm as movie_nm4_8_0_,
+        koreaboxof0_.open_dt as open_dt5_8_0_,
+        koreaboxof0_.movie_rank as movie_ra6_8_0_ 
+    from
+        korea_box_office koreaboxof0_ 
+    where
+        koreaboxof0_.movie_id=?
+Hibernate: 
+    select
+        plot0_.plot_id as plot_id1_14_0_,
+        plot0_.movie_id as movie_id3_14_0_,
+        plot0_.plot_text as plot_tex2_14_0_ 
+    from
+        plot plot0_ 
+    where
+        plot0_.movie_id=?
+Hibernate: 
+    select
+        poster0_.poster_id as poster_i1_15_0_,
+        poster0_.movie_id as movie_id3_15_0_,
+        poster0_.poster_image_url as poster_i2_15_0_ 
+    from
+        poster poster0_ 
+    where
+        poster0_.movie_id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
